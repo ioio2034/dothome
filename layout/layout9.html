@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Layout9</title>
+	<style>
+		/* reset */
+		body,div {padding:0;margin:0;}
+
+        /* layout */
+        #wrap {overflow:hidden; background-color: #e0f2f1; width: 100%; font-size:24px; color:#666666; text-align:center;  margin: 0 auto;}
+        #header {width: 100%; height: 220px; line-height:220px; background-color: #004d40; margin-bottom:10px;}
+        #content {width: 100%; height: 1460px; background-color: #e0f2f1; margin-bottom:10px;}
+        #footer {width: 100%; height: 305px; line-height:305px; background-color: #cddc39; }
+
+
+        /* container */
+        .container {width: 1080px; height:inherit; background-color: rgba(255, 255, 255, 0.4); margin: 0 auto;}
+
+        /* content */
+        #content .container
+        .c-box1 {float:left; width: 740px; height: 125px; line-height: 125px; background-color: #b2dfdb; margin: 0 10px 10px 0;}
+        .c-box2 {float:left; width: 330px; height: 125px; line-height: 125px; background-color: #80cbc4; margin-bottom:10px;}
+        .c-box3 {float:left; width: 740px; height: 300px; line-height:290px; margin:0 10px 10px 0;}
+        .c-box3 .c-box3-1 {width: 740px; height: 45px; line-height: 45px; margin-bottom: 10px; background-color: #81c784;}
+        .c-box3 .c-box3-2 {width: 740px; height: 245px; line-height: 245px; background-color: #4dd0e1;}
+        .c-box4 {float:left; width: 330px; height: 140px; line-height: 140px; background-color: #a5d6a7; margin-bottom:10px;}
+        .c-box4-1 {float:left; width: 330px; height: 150px; line-height: 150px; background-color: #b2ebf2; margin-bottom:10px;}
+        .c-box5 {float:left; width: 740px; height: 880px; line-height: 880px; background-color: #aed581; margin: 0 10px 10px 0;}
+        .c-box6 {float:left; width: 330px; height: 880px; line-height: 880px; background-color: #80deea; margin-bottom:10px;}
+        .c-box7 {float:left; width: 740px; height: 125px; line-height: 125px;background-color: #b2ebf2; margin: 0 10px 10px 0;}
+        .c-box8 {float:left; width: 330px; height: 125px; line-height: 125px;background-color: #4fc3f7; margin-bottom:10px;}
+
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<div class="container">header</div>
+		</div>
+		<!-- //header -->
+
+		<div id="content">
+			<div class="container">
+				<div class="c-box1">box1</div>
+				<div class="c-box2">box2</div>
+				<div class="c-box3">
+					<div class="c-box3-1">box3-1</div>
+					<div class="c-box3-2">box3-2</div>
+				</div>
+				<div class="c-box4">box4</div>
+				<div class="c-box4-1">box4-1</div>
+				<div class="c-box5">box5</div>
+				<div class="c-box6">box6</div>
+				<div class="c-box7">box7</div>
+				<div class="c-box8">box8</div>
+			</div>
+		</div>
+		<!-- //content -->
+
+		<div id="footer">
+			<div class="container">footer</div>
+		</div>
+		<!-- //footer -->
+
+	</div>
+	<!-- //wrap -->
+
+</body>
+</html>

@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Jinhee">
+	<meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+	<meta name="keywords" content="웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, publisher, html5, html4, css3, html, markup, design">
+	<title>SVG</title>
+
+	<!-- web_font -->
+	<link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css' />
+
+	<!-- css -->
+	<link href="../assets/css/bootstrapTheme.css" rel="stylesheet">
+	<link href="../assets/css/custom.css" rel="stylesheet">
+	<link href="../assets/css/style.css" rel="stylesheet">
+
+	<!-- Prettify -->
+	<link href="../assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+	<!-- Icon -->
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="apple-touch-icon" href="../assets/ico/icon_57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../assets/ico/icon_114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../assets/ico/icon_72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../assets/ico/icon_144.png">
+
+	<!-- hmlt5 support -->
+	<!--[if lt IE 9]><script src="../assets/js/html5shiv.js"></script><![endif]-->
+
+	<!-- IE6,7 support -->
+	<!--[if lte IE 7]><link rel="stylesheet" href="comm/css/ie7.css" type="text/css" ><![endif]-->
+	<!--[if IE 8]><link rel="stylesheet" href="comm/css/ie8.css" type="text/css" ><![endif]-->
+
+	<!--[if lte IE 6]>
+	<p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">
+	사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+	<a href="http://www.microsoft.com/korea/ie" target="_blank" >업그레이드,</a>
+	<a href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a> 
+	<a href="http://kr.opera.com/download/" target="_blank">오페라,</a>,
+	<a href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+	<a href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+	<![endif]-->
+
+	<style>
+		.face {
+			display: block;
+			margin: 20px auto;
+			width: 400px;
+		}
+
+		.face img {
+			width: 400px;
+			border-radius: 50%;
+		}
+
+		.face1 img {
+			width: 22%;
+			border-radius: 10%;
+			margin: 1%;
+		}
+
+		.member {
+			margin: 50px 0;
+		}
+
+		.member li {
+			width: 150px;
+			list-style: none;
+			display: inline-block;
+			margin: 6px;
+		}
+
+		.member li img {
+			border-radius: 50%;
+		}
+	</style>
+</head>
+
+
+
+<body>
+	<!-- nav -->
+	<div id="top-nav" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                </button>
+				<div class="nav-collapse collapse">
+					<ul class="nav pull-right">
+						<li><a href="#">Jinhee</a></li>
+						<li><a href="#">reference</a></li>
+						<li><a href="#">tutorial</a></li>
+						<li><a href="#">css</a></li>
+						<li><a href="#">html</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //nav -->
+
+	<!-- header -->
+	<div id="header">
+		<div class="container">
+			<div class="row">
+				<div class="span12" style="text-align:center;">
+					<div class="header_tit">
+						<h1>Professional web publishers</h1>
+						<h2><a href="http://ioio2034a.dothome.co.kr/">http://ioio2034a.dothome.co.kr/</a></h2>
+					</div>
+					<div class="header_icon" id="wow">
+						<ul>
+							<li class="icon_tit1"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+							<li class="icon_tit2"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+							<li class="icon_tit3"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+							<li class="icon_tit4"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div class="container" style="margin-top:20px;">
+		<div class="row-fluid">
+			<div class="span12">
+				<h1>SVG</h1>
+				<div class="lead">SVG(Scalable Vector Graphic)는 2차원 벡터 그래픽을 표현하기 위한 XML 기반의 파일 형식으로, 1999년 W3C의 주도하에 개발된 오픈 표준의 벡터 그래픽 파일 형식입니다.</div>
+
+				<style>
+					.block1 {width: 200px; height: 200px; margin: 40px; float: left;}
+					.block1 > svg {width: 200px; height: 200px; background: #ffebee;}
+				</style>
+
+				<h2>Rect</h2>
+				<div class="well clearfix">
+					<div class="block1">
+						<svg>
+							<rect width="140" height="140" fill="#f48fb1" x="30" y="30"	/>
+						</svg>
+					</div>
+					<div class="block1">
+						<svg>
+							<rect width="140" height="140" fill="#f48fb1" x="30" y="30" stroke-width="5" stroke="#880e4f"	/>
+						</svg>						
+					</div>
+					<div class="block1">
+						<svg>
+							<rect width="140" height="140" fill="#f48fb1" x="30" y="30" stroke-width="10" stroke="#880e4f"	/>
+						</svg>
+					</div>
+					<div class="block1">
+						<svg>
+							<rect width="140" height="140" fill="#f48fb1" x="30" y="30" stroke-width="15" stroke="#880e4f"	/>
+						</svg>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+&lt;svg&gt;&lt;rect width="140" height="140" fill="#f48fb1" x="30" y="30" /&gt;&lt;/svg&gt;
+&lt;svg&gt;&lt;rect width="140" height="140" fill="#f48fb1" x="30" y="30" stroke-width="5" stroke="#880e4f" /&gt;&lt;/svg&gt;
+&lt;svg&gt;&lt;rect width="140" height="140" fill="#f48fb1" x="30" y="30" stroke-width="10" stroke="#880e4f" /&gt;&lt;/svg&gt;
+&lt;svg&gt;&lt;rect width="140" height="140" fill="#f48fb1" x="30" y="30" stroke-width="15" stroke="#880e4f" /&gt;&lt;/svg&gt;
+</pre>
+
+				<h2>Rect : border-radius</h2>
+				<div class="well clearfix">
+					<div class="block1">
+						<svg>
+							<rect width="140" height="140" fill="#f48fb1" x="30" y="30" rx="5" ry="5"	/>
+						</svg>
+					</div>
+					<div class="block1">
+						<svg>
+							<rect width="140" height="140" fill="#f48fb1" x="30" y="30" rx="20" ry="20" stroke-width="5" stroke="#880e4f"	/>
+						</svg>						
+					</div>
+					<div class="block1">
+						<svg>
+							<rect width="140" height="140" fill="#f48fb1" x="30" y="30" rx="40" ry="40" stroke-width="5" stroke="#880e4f"	/>
+						</svg>
+					</div>
+					<div class="block1">
+						<svg>
+							<rect width="140" height="140" fill="#f48fb1" x="30" y="30" rx="70" ry="70" stroke-width="5" stroke="#880e4f"	/>
+						</svg>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+&lt;svg&gt;&lt;rect width="140" height="140" fill="#f48fb1" x="30" y="30" rx="5" ry="5" /&gt;&lt;/svg&gt;
+&lt;svg&gt;&lt;rect width="140" height="140" fill="#f48fb1" x="30" y="30" rx="20" ry="20" stroke-width="5" stroke="#880e4f" /&gt;&lt;/svg&gt;	
+&lt;svg&gt;&lt;rect width="140" height="140" fill="#f48fb1" x="30" y="30" rx="40" ry="40" stroke-width="5" stroke="#880e4f" /&gt;&lt;/svg&gt;
+&lt;svg&gt;&lt;rect width="140" height="140" fill="#f48fb1" x="30" y="30" rx="70" ry="70" stroke-width="5" stroke="#880e4f" /&gt;&lt;/svg&gt;
+</pre>
+
+				<h2>Circle</h2>
+				<div class="well clearfix">
+					<div class="block1">
+						<svg>
+							<circle cx="100" cy="100" r="80" stroke="#880e4f" stroke-width="0" fill="#f48fb1" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg>
+							<circle cx="100" cy="100" r="80" stroke="#880e4f" stroke-width="5" fill="#f48fb1" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg>
+							<circle cx="100" cy="100" r="80" stroke="#880e4f" stroke-width="10" fill="#f48fb1" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg>
+							<circle cx="100" cy="100" r="80" stroke="#880e4f" stroke-width="15" fill="#f48fb1" />
+						</svg>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+&lt;svg&gt;&lt;circle cx="100" cy="100" r="80" stroke="#880e4f" stroke-width="0" fill="#f48fb1" /&gt;&lt;/svg&gt;
+&lt;svg&gt;&lt;circle cx="100" cy="100" r="80" stroke="#880e4f" stroke-width="5" fill="#f48fb1" /&gt;&lt;/svg&gt;
+&lt;svg&gt;&lt;circle cx="100" cy="100" r="80" stroke="#880e4f" stroke-width="10" fill="#f48fb1" /&gt;&lt;/svg&gt;
+&lt;svg&gt;&lt;circle cx="100" cy="100" r="80" stroke="#880e4f" stroke-width="15" fill="#f48fb1" /&gt;&lt;/svg&gt;
+</pre>
+				<h2>ellipse</h2>
+				<div class="well clearfix">
+					<div class="block1">
+						<svg>
+							<ellipse cx="100" cy="100" rx="90" ry="90" fill="#f48fb1" stroke="#880e4f" stroke-width="0"	/>
+						</svg>
+					</div>
+					<div class="block1">
+						<svg>
+							<ellipse cx="100" cy="100" rx="90" ry="70" fill="#f48fb1" stroke="#880e4f" stroke-width="0"	/>
+						</svg>
+					</div>
+					<div class="block1">
+						<svg>
+							<ellipse cx="100" cy="100" rx="90" ry="50" fill="#f48fb1" stroke="#880e4f" stroke-width="0"	/>
+						</svg>
+					</div>
+					<div class="block1">
+						<svg>
+							<ellipse cx="100" cy="100" rx="90" ry="30" fill="#f48fb1" stroke="#880e4f" stroke-width="0"	/>
+						</svg>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+&lt;svg&gt;&lt;ellipse cx="100" cy="100" rx="90" ry="90" fill="#f48fb1" stroke="#880e4f" stroke-width="0" /&gt;&lt;/svg&gt;
+&lt;svg&gt;&lt;ellipse cx="100" cy="100" rx="90" ry="70" fill="#f48fb1" stroke="#880e4f" stroke-width="0" /&gt;&lt;/svg&gt;
+&lt;svg&gt;&lt;ellipse cx="100" cy="100" rx="90" ry="50" fill="#f48fb1" stroke="#880e4f" stroke-width="0" /&gt;&lt;/svg&gt;
+&lt;svg&gt;&lt;ellipse cx="100" cy="100" rx="90" ry="30" fill="#f48fb1" stroke="#880e4f" stroke-width="0" /&gt;&lt;/svg&gt;
+</pre>
+				<h2>polygon</h2>
+				<div class="well clearfix">
+					<div class="block1">
+						<svg>
+							<polygon fill="#f48fb1" stroke="#880e4f" stroke-width="5" points="21.369,116.904 157.512,15.096 177.608,183.904 " />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg>
+							<polygon fill="#f48fb1" stroke="#880e4f" stroke-width="5" points="86.425,190.557 14.097,114.394 64.182,22.069 167.465,41.174 181.211,145.305 " />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg>
+							<polygon fill="#f48fb1" stroke="#880e4f" stroke-width="5" points="39.166,166.489 12.002,80.561 72.835,14.072 160.833,33.512 187.998,119.438 127.164,185.928 " />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg>
+							<polygon fill="#f48fb1" stroke="#880e4f" stroke-width="5" points="46.924,170.106 13.336,110.981 31.394,45.424 90.518,11.836 156.075,29.894 189.664,89.018 
+	171.606,154.575 112.481,188.163 " />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg>
+							<polygon fill="#f48fb1" stroke="#880e4f" stroke-width="1" points="101,14.024 127.799,68.323 187.72,77.031 144.359,119.296 154.596,178.976 101,150.798 
+	47.404,178.976 57.64,119.296 14.28,77.031 74.202,68.323 " />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg>
+							<polygon fill="#f48fb1" stroke="#880e4f" stroke-width="1" points="100,6.963 123.259,59.714 180.571,53.481 146.519,100 180.571,146.519 123.259,140.286 100,193.037 
+	76.741,140.286 19.428,146.519 53.482,100 19.428,53.481 76.741,59.714 " />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg>
+							<polygon fill="#f48fb1" stroke="#880e4f" stroke-width="1" points="179.35,139.323 134.421,127.714 156.57,168.49 120.248,139.61 123.897,185.871 102.462,144.714 
+	86.98,188.459 84.138,142.143 52.201,175.809 68.443,132.34 25.575,150.105 58.093,117.001 11.705,115.795 54.876,98.778 
+	12.989,78.809 59.35,80.823 29.207,45.542 70.739,66.24 57.552,21.749 87.076,57.549 93.125,11.541 105.535,56.255 129.773,16.685 
+	122.924,62.581 161.162,36.291 136.237,75.432 181.862,66.968 143.172,92.588 188.296,103.412 142.53,111.08 " />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg>
+							<polygon fill="#f48fb1" stroke="#880e4f" stroke-width="1" points="169.423,147.387 132.258,126.832 159.178,159.682 126.574,132.465 146.79,169.814 119.927,136.92 
+	132.71,177.421 112.557,140.036 117.443,182.225 104.73,141.702 101.545,184.053 96.73,141.856 85.587,182.838 88.845,140.493 
+	70.147,178.626 81.36,137.663 55.784,171.568 74.546,133.467 43.016,161.919 68.65,128.058 32.304,150.028 63.883,121.63 
+	24.037,136.325 60.42,114.417 18.512,121.306 58.384,106.678 15.93,105.512 57.849,98.694 16.383,89.514 58.835,90.753 
+	19.856,73.891 61.306,83.143 26.222,59.208 65.173,76.137 35.253,45.995 70.295,69.989 46.621,34.73 76.489,64.923 59.915,25.82 
+	83.529,61.119 74.655,19.587 91.163,58.718 90.308,16.256 99.112,57.804 106.309,15.947 107.091,58.411 122.079,18.673 
+	114.811,60.517 137.049,24.334 121.992,64.046 150.676,32.726 128.377,68.87 162.469,43.544 133.732,74.815 172.002,56.399 
+	137.866,81.667 178.929,70.826 140.628,89.177 183.001,86.304 141.92,97.074 184.07,102.271 141.692,105.073 182.099,118.153 
+	139.956,112.885 177.156,133.375 136.773,120.226 " />
+						</svg>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+&lt;svg&gt;&lt;polygon fill="#f48fb1" stroke="#880e4f" stroke-width="5" points="21.369,116.904 157.512,15.096 177.608,183.904" /&gt;&lt;/svg&gt;
+&lt;svg&gt;&lt;polygon fill="#f48fb1" stroke="#880e4f" stroke-width="5" points="86.425,190.557 14.097,114.394 64.182,22.069 167.465,41.174 181.211,145.305" /&gt;&lt;/svg&gt;
+&lt;svg&gt;&lt;polygon fill="#f48fb1" stroke="#880e4f" stroke-width="5" points="39.166,166.489 12.002,80.561 72.835,14.072 160.833,33.512 187.998,119.438 127.164,185.928" /&gt;&lt;/svg&gt;
+&lt;svg&gt;&lt;polygon fill="#f48fb1" stroke="#880e4f" stroke-width="5" points="46.924,170.106 13.336,110.981 31.394,45.424 90.518,11.836 156.075,29.894 189.664,89.018 171.606,154.575 112.481,188.163" /&gt;&lt;/svg&gt;
+&lt;svg&gt;&lt;polygon fill="#f48fb1" stroke="#880e4f" stroke-width="1" points="101,14.024 127.799,68.323 187.72,77.031 144.359,119.296 154.596,178.976 101,150.798 47.404,178.976 57.64,119.296 14.28,77.031 74.202,68.323" /&gt;&lt;/svg&gt;
+&lt;svg&gt;&lt;polygon fill="#f48fb1" stroke="#880e4f" stroke-width="1" points="100,6.963 123.259,59.714 180.571,53.481 146.519,100 180.571,146.519 123.259,140.286 100,193.037 76.741,140.286 19.428,146.519 53.482,100 19.428,53.481 76.741,59.714" /&gt;&lt;/svg&gt;
+&lt;svg&gt;&lt;polygon fill="#f48fb1" stroke="#880e4f" stroke-width="1" points="179.35,139.323 134.421,127.714 156.57,168.49 120.248,139.61 123.897,185.871 102.462,144.714 86.98,188.459 84.138,142.143 52.201,175.809 68.443,132.34 25.575,150.105 58.093,117.001 11.705,115.795 54.876,98.778 12.989,78.809 59.35,80.823 29.207,45.542 70.739,66.24 57.552,21.749 87.076,57.549 93.125,11.541 105.535,56.255 129.773,16.685 122.924,62.581 161.162,36.291 136.237,75.432 181.862,66.968 143.172,92.588 188.296,103.412 142.53,111.08" /&gt;&lt;/svg&gt;
+&lt;svg&gt;&lt;polygon fill="#f48fb1" stroke="#880e4f" stroke-width="1" points="169.423,147.387 132.258,126.832 159.178,159.682 126.574,132.465 146.79,169.814 119.927,136.92 132.71,177.421 112.557,140.036 117.443,182.225 104.73,141.702 101.545,184.053 96.73,141.856 85.587,182.838 88.845,140.493 70.147,178.626 81.36,137.663 55.784,171.568 74.546,133.467 43.016,161.919 68.65,128.058 32.304,150.028 63.883,121.63 24.037,136.325 60.42,114.417 18.512,121.306 58.384,106.678 15.93,105.512 57.849,98.694 16.383,89.514 58.835,90.753 19.856,73.891 61.306,83.143 26.222,59.208 65.173,76.137 35.253,45.995 70.295,69.989 46.621,34.73 76.489,64.923 59.915,25.82 83.529,61.119 74.655,19.587 91.163,58.718 90.308,16.256 99.112,57.804 106.309,15.947 107.091,58.411 122.079,18.673 114.811,60.517 137.049,24.334 121.992,64.046 150.676,32.726 128.377,68.87 162.469,43.544 133.732,74.815 172.002,56.399 137.866,81.667 178.929,70.826 140.628,89.177 183.001,86.304 141.92,97.074 184.07,102.271 141.692,105.073 182.099,118.153 139.956,112.885 177.156,133.375 136.773,120.226" /&gt;&lt;/svg&gt;
+</pre>
+				<h2>Line</h2>
+				<div class="well clearfix">
+					<div class="block1">
+						<svg style="background: #e3f3fd">
+							<line x1="0" y1="0" x2="200" y2="200" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #e3f3fd">
+							<line x1="50" y1="50" x2="200" y2="200" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #e3f3fd">
+							<line x1="100" y1="100" x2="200" y2="200" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #e3f3fd">
+							<line x1="150" y1="150" x2="200" y2="200" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+&lt;svg style="background: #e3f3fd"&gt;&lt;line x1="0" y1="0" x2="200" y2="200" stroke="#0d47a1" stroke-width="2" fill="none" /&gt;&lt;/svg&gt;
+&lt;svg style="background: #e3f3fd"&gt;&lt;line x1="50" y1="50" x2="200" y2="200" stroke="#0d47a1" stroke-width="2" fill="none" /&gt;&lt;/svg&gt;
+&lt;svg style="background: #e3f3fd"&gt;&lt;line x1="100" y1="100" x2="200" y2="200" stroke="#0d47a1" stroke-width="2" fill="none" /&gt;&lt;/svg&gt;
+&lt;svg style="background: #e3f3fd"&gt;&lt;line x1="150" y1="150" x2="200" y2="200" stroke="#0d47a1" stroke-width="2" fill="none" /&gt;&lt;/svg&gt;
+</pre>
+				<h2>PolyLine</h2>
+				<div class="well clearfix">
+					<div class="block1">
+						<svg style="background: #e3f3fd">
+							<polyline points="19.5,20.5 19.5,179.5 " stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #e3f3fd">
+							<polyline points="19.5,20.5 19.5,179.5 178.5,95 " stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #e3f3fd">
+							<polyline points="19.5,20.5 19.5,179.5 178.5,95 55,65 " stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #e3f3fd">
+							<polyline points="19.5,20.5 19.5,179.5 178.5,95 55,65 122.5,179.5  " stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+&lt;svg style="background: #e3f3fd"&gt;&lt;polyline points="19.5,20.5 19.5,179.5 " stroke="#0d47a1" stroke-width="2" fill="none" /&gt;&lt;/svg&gt;
+&lt;svg style="background: #e3f3fd"&gt;&lt;polyline points="19.5,20.5 19.5,179.5 178.5,95 " stroke="#0d47a1" stroke-width="2" fill="none" /&gt;&lt;/svg&gt;
+&lt;svg style="background: #e3f3fd"&gt;&lt;polyline points="19.5,20.5 19.5,179.5 178.5,95 55,65 " stroke="#0d47a1" stroke-width="2" fill="none" /&gt;&lt;/svg&gt;
+&lt;svg style="background: #e3f3fd"&gt;&lt;polyline points="19.5,20.5 19.5,179.5 178.5,95 55,65 122.5,179.5  " stroke="#0d47a1" stroke-width="2" fill="none" /&gt;&lt;/svg&gt;
+</pre>
+				<h2>Path</h2>
+				<div class="well clearfix">
+					<div class="block1">
+						<svg style="background: #e3f3fd">
+							<path d="M14.5,14.5c0,94.518,76.482,171,171,171" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #e3f3fd">
+							<path d="M177.73,174.021c-50.258,29.271-114.729,12.258-144-38
+	c-23.417-40.207-9.806-91.784,30.4-115.201c32.165-18.733,73.426-7.845,92.16,24.32c14.987,25.732,6.276,58.742-19.455,73.728
+	c-20.586,11.99-46.994,5.021-58.983-15.564c-9.591-16.469-4.017-37.595,12.452-47.187c13.175-7.673,30.076-3.213,37.749,9.961
+	c6.139,10.54,2.571,24.061-7.97,30.199c-8.432,4.912-19.248,2.057-24.159-6.375c-3.929-6.746-1.646-15.398,5.1-19.327" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #e3f3fd">
+							<path d="M97.376,106.333c-46.416,112.054-115.763,42.703-3.71-3.71
+		c-112.053,46.413-112.053-51.663,0-5.247c-112.053-46.416-42.706-115.763,3.71-3.71c-46.416-112.053,51.66-112.053,5.247,0
+		c46.413-112.053,115.764-42.706,3.71,3.71c112.054-46.416,112.054,51.66,0,5.247c112.054,46.413,42.703,115.764-3.71,3.71
+		C149.036,218.387,50.96,218.387,97.376,106.333z" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #e3f3fd">
+							<path d="M78.065,181.855c29.246-109.141,41.909-101.83-37.989-21.932
+		c79.898-79.898,87.209-67.234-21.932-37.992c109.141-29.242,109.141-14.62,0-43.866c109.141,29.246,101.83,41.909,21.932-37.989
+		c79.898,79.898,67.235,87.209,37.989-21.932c29.246,109.141,14.624,109.141,43.866,0c-29.242,109.141-41.906,101.83,37.992,21.932
+		c-79.898,79.898-87.209,67.235,21.932,37.989c-109.141,29.246-109.141,14.624,0,43.866
+		c-109.141-29.242-101.83-41.906-21.932,37.992c-79.898-79.898-67.234-87.209-37.992,21.932
+		C92.689,72.715,107.312,72.715,78.065,181.855z" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #e3f3fd">
+							<path d="M32.571,18.429c2.401,2.401-11.741,16.544-9.34,18.945
+		c2.403,2.403,16.545-11.739,18.949-9.336c2.401,2.401-11.741,16.544-9.34,18.945c2.401,2.401,16.543-11.741,18.945-9.34
+		c2.402,2.402-11.741,16.544-9.339,18.946c2.403,2.403,16.545-11.74,18.948-9.337c2.401,2.402-11.741,16.544-9.339,18.946
+		C54.457,68.6,68.6,54.457,71.001,56.859c2.403,2.403-11.739,16.545-9.336,18.949c2.402,2.402,16.544-11.74,18.947-9.338
+		c2.403,2.403-11.739,16.545-9.336,18.949c2.402,2.402,16.545-11.74,18.947-9.338c2.403,2.403-11.74,16.545-9.337,18.948
+		s16.545-11.74,18.948-9.337c2.403,2.404-11.739,16.546-9.335,18.949c2.403,2.403,16.545-11.739,18.948-9.337
+		c2.403,2.404-11.739,16.546-9.335,18.95c2.404,2.403,16.546-11.738,18.95-9.335c2.403,2.403-11.739,16.546-9.336,18.949
+		c2.401,2.401,16.544-11.741,18.945-9.34c2.403,2.403-11.739,16.546-9.336,18.949c2.402,2.402,16.545-11.74,18.947-9.338
+		c2.402,2.403-11.739,16.545-9.337,18.948c2.404,2.404,16.547-11.738,18.951-9.334s-11.738,16.547-9.334,18.951
+		s16.547-11.738,18.951-9.334c2.403,2.403-11.739,16.546-9.336,18.949c2.404,2.404,16.547-11.738,18.951-9.334
+		c2.405,2.406-11.736,16.548-9.331,18.954c2.408,2.407,16.55-11.734,18.958-9.327c2.407,2.408-11.734,16.55-9.327,18.958" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #e3f3fd">
+							<path d="M100,18.893C100,100,100,100,118.512,65.783
+		C100,100,100,100,166.717,51.02C100,100,100,100,141.598,94.73C100,100,100,100,183.193,123.213C100,100,100,100,133.359,130.826
+		C100,100,100,100,137.025,181.107C100,100,100,100,100,146.891C100,100,100,100,62.976,181.107C100,100,100,100,66.642,130.826
+		C100,100,100,100,16.807,123.213C100,100,100,100,58.403,94.73C100,100,100,100,33.284,51.02C100,100,100,100,81.487,65.783
+		C100,100,100,100,100,18.893z" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #e3f3fd">
+							<path d="M106,184c-23-13-41-34-43-61c-16,5-24,23-23,39c-6-25-3-55,17-74
+		c-14-9-31-3-43,6c14-22,41-36,67-34c0-16-15-26-29-30c26-1,53,10,67,33c1-2,3-3,5-5c9-10,6-24,3-36c15,20,22,48,12,72
+		c15,6,30-5,38-17c-6,24-25,47-50,51c4,16,24,21,39,20c-24,10-52,8-73-8C87,156,94,173,106,184L106,184z" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #e3f3fd">
+							<path d="M184.978,154.219c-6.256,6.256-19.179,3.634-26.49,7.861
+		c-7.565,4.374-11.793,16.821-20.043,19.023c-8.369,2.234-18.264-6.479-26.869-6.479c-8.604,0-18.5,8.714-26.869,6.479
+		c-8.25-2.203-12.478-14.651-20.043-19.025c-7.311-4.227-20.234-1.604-26.49-7.859c-5.004-5.005-1.333-16.551-4.715-22.4
+		c-3.5-6.052-15.29-8.675-17.051-15.275c-1.788-6.695,7.15-14.869,7.15-21.753s-8.937-15.058-7.149-21.753
+		c1.762-6.6,13.552-9.224,17.051-15.275c3.382-5.849-0.29-17.396,4.715-22.4c4.003-4.003,14.449,0.506,19.128-2.199
+		c4.841-2.799,6.182-14.063,11.462-15.473c5.356-1.43,12.153,7.687,17.66,7.687c5.507,0,12.305-9.116,17.661-7.686
+		c5.28,1.41,6.62,12.673,11.462,15.472c4.679,2.706,15.123-1.804,19.127,2.199c3.203,3.203-1.978,12.767,0.187,16.51
+		c2.239,3.874,13.083,4.188,14.211,8.412c1.144,4.285-8.115,9.979-8.116,14.386c0,4.406,9.26,10.102,8.115,14.386
+		c-1.127,4.224-11.971,4.539-14.21,8.412c-2.164,3.743,3.017,13.306-0.187,16.509c-2.563,2.563-11.42-3.155-14.415-1.424
+		c-3.099,1.791-2.592,12.298-5.971,13.2c-3.428,0.915-8.242-8.459-11.767-8.459c-3.525,0-8.339,9.374-11.767,8.459
+		c-3.379-0.902-2.873-11.409-5.971-13.2c-2.995-1.731-11.854,3.986-14.416,1.424c-2.05-2.05,4.097-10.345,2.711-12.74
+		c-1.434-2.479-11.669-1.314-12.391-4.018c-0.732-2.742,8.732-6.852,8.732-9.672s-9.465-6.929-8.733-9.671
+		c0.722-2.703,10.959-1.539,12.392-4.018c1.385-2.396-4.762-10.69-2.712-12.74c1.64-1.64,9.483,4.85,11.4,3.742
+		c1.983-1.146,0.294-11.168,2.457-11.746c2.194-0.585,5.739,8.953,7.994,8.953c2.256,0,5.801-9.538,7.995-8.952
+		c2.162,0.578,0.472,10.599,2.455,11.745c1.917,1.108,9.761-5.381,11.4-3.742c1.312,1.312-5.454,8.793-4.567,10.327
+		c0.917,1.586,10.767-0.524,11.229,1.206c0.469,1.755-9.128,4.849-9.128,6.653c-0.001,1.805,9.597,4.9,9.128,6.655
+		c-0.462,1.73-10.312-0.38-11.229,1.206c-0.887,1.534,5.878,9.016,4.566,10.328c-1.05,1.049-8.243-5.936-9.47-5.226
+		c-1.27,0.734,1.177,10.445-0.207,10.815c-1.404,0.374-4.137-9.269-5.58-9.269c-1.444,0-4.177,9.643-5.581,9.269
+		c-1.384-0.37,1.062-10.081-0.207-10.815c-1.227-0.709-8.42,6.275-9.469,5.226c-0.84-0.84,6.321-7.802,5.754-8.783
+		c-0.587-1.016-10.188,1.7-10.483,0.593c-0.3-1.123,9.38-3.567,9.38-4.722c0-1.155-9.681-3.6-9.381-4.723
+		c0.295-1.107,9.896,1.607,10.483,0.592c0.567-0.981-6.594-7.943-5.754-8.783" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+&lt;svg style="background: #e3f3fd"&gt;&lt;path d="M14.5,14.5c0,94.518,76.482,171,171,171" stroke="#0d47a1" stroke-width="2" fill="none" /&gt;&lt;/svg&gt;
+&lt;svg style="background: #e3f3fd"&gt;&lt;path d="M177.73,174.021c-50.258,29.271-114.729,12.258-144-38 c-23.417-40.207-9.806-91.784,30.4-115.201c32.165-18.733,73.426-7.845,92.16,24.32c14.987,25.732,6.276,58.742-19.455,73.728 c-20.586,11.99-46.994,5.021-58.983-15.564c-9.591-16.469-4.017-37.595,12.452-47.187c13.175-7.673,30.076-3.213,37.749,9.961 c6.139,10.54,2.571,24.061-7.97,30.199c-8.432,4.912-19.248,2.057-24.159-6.375c-3.929-6.746-1.646-15.398,5.1-19.327" stroke="#0d47a1" stroke-width="2" fill="none" /&gt;&lt;/svg&gt;
+&lt;svg style="background: #e3f3fd"&gt;&lt;path d="M97.376,106.333c-46.416,112.054-115.763,42.703-3.71-3.71 c-112.053,46.413-112.053-51.663,0-5.247c-112.053-46.416-42.706-115.763,3.71-3.71c-46.416-112.053,51.66-112.053,5.247,0 c46.413-112.053,115.764-42.706,3.71,3.71c112.054-46.416,112.054,51.66,0,5.247c112.054,46.413,42.703,115.764-3.71,3.71 C149.036,218.387,50.96,218.387,97.376,106.333z" stroke="#0d47a1" stroke-width="2" fill="none" /&gt;&lt;/svg&gt;
+&lt;svg style="background: #e3f3fd"&gt;&lt;path d="M78.065,181.855c29.246-109.141,41.909-101.83-37.989-21.932 c79.898-79.898,87.209-67.234-21.932-37.992c109.141-29.242,109.141-14.62,0-43.866c109.141,29.246,101.83,41.909,21.932-37.989 c79.898,79.898,67.235,87.209,37.989-21.932c29.246,109.141,14.624,109.141,43.866,0c-29.242,109.141-41.906,101.83,37.992,21.932 c-79.898,79.898-87.209,67.235,21.932,37.989c-109.141,29.246-109.141,14.624,0,43.866 c-109.141-29.242-101.83-41.906-21.932,37.992c-79.898-79.898-67.234-87.209-37.992,21.932 C92.689,72.715,107.312,72.715,78.065,181.855z" stroke="#0d47a1" stroke-width="2" fill="none" /&gt;&lt;/svg&gt;
+&lt;svg style="background: #e3f3fd"&gt;&lt;path d="M32.571,18.429c2.401,2.401-11.741,16.544-9.34,18.945 c2.403,2.403,16.545-11.739,18.949-9.336c2.401,2.401-11.741,16.544-9.34,18.945c2.401,2.401,16.543-11.741,18.945-9.34 c2.402,2.402-11.741,16.544-9.339,18.946c2.403,2.403,16.545-11.74,18.948-9.337c2.401,2.402-11.741,16.544-9.339,18.946 C54.457,68.6,68.6,54.457,71.001,56.859c2.403,2.403-11.739,16.545-9.336,18.949c2.402,2.402,16.544-11.74,18.947-9.338 c2.403,2.403-11.739,16.545-9.336,18.949c2.402,2.402,16.545-11.74,18.947-9.338c2.403,2.403-11.74,16.545-9.337,18.948 s16.545-11.74,18.948-9.337c2.403,2.404-11.739,16.546-9.335,18.949c2.403,2.403,16.545-11.739,18.948-9.337 c2.403,2.404-11.739,16.546-9.335,18.95c2.404,2.403,16.546-11.738,18.95-9.335c2.403,2.403-11.739,16.546-9.336,18.949 c2.401,2.401,16.544-11.741,18.945-9.34c2.403,2.403-11.739,16.546-9.336,18.949c2.402,2.402,16.545-11.74,18.947-9.338 c2.402,2.403-11.739,16.545-9.337,18.948c2.404,2.404,16.547-11.738,18.951-9.334s-11.738,16.547-9.334,18.951 s16.547-11.738,18.951-9.334c2.403,2.403-11.739,16.546-9.336,18.949c2.404,2.404,16.547-11.738,18.951-9.334 c2.405,2.406-11.736,16.548-9.331,18.954c2.408,2.407,16.55-11.734,18.958-9.327c2.407,2.408-11.734,16.55-9.327,18.958" stroke="#0d47a1" stroke-width="2" fill="none" /&gt;&lt;/svg&gt;
+&lt;svg style="background: #e3f3fd"&gt;&lt;path d="M100,18.893C100,100,100,100,118.512,65.783 C100,100,100,100,166.717,51.02C100,100,100,100,141.598,94.73C100,100,100,100,183.193,123.213C100,100,100,100,133.359,130.826 C100,100,100,100,137.025,181.107C100,100,100,100,100,146.891C100,100,100,100,62.976,181.107C100,100,100,100,66.642,130.826 C100,100,100,100,16.807,123.213C100,100,100,100,58.403,94.73C100,100,100,100,33.284,51.02C100,100,100,100,81.487,65.783 C100,100,100,100,100,18.893z" stroke="#0d47a1" stroke-width="2" fill="none" /&gt;&lt;/svg&gt;
+&lt;svg style="background: #e3f3fd"&gt;&lt;path d="M106,184c-23-13-41-34-43-61c-16,5-24,23-23,39c-6-25-3-55,17-74 c-14-9-31-3-43,6c14-22,41-36,67-34c0-16-15-26-29-30c26-1,53,10,67,33c1-2,3-3,5-5c9-10,6-24,3-36c15,20,22,48,12,72 c15,6,30-5,38-17c-6,24-25,47-50,51c4,16,24,21,39,20c-24,10-52,8-73-8C87,156,94,173,106,184L106,184z" stroke="#0d47a1" stroke-width="2" fill="none" /&gt;&lt;/svg&gt;
+&lt;svg style="background: #e3f3fd"&gt;&lt;path d="M184.978,154.219c-6.256,6.256-19.179,3.634-26.49,7.861 c-7.565,4.374-11.793,16.821-20.043,19.023c-8.369,2.234-18.264-6.479-26.869-6.479c-8.604,0-18.5,8.714-26.869,6.479 c-8.25-2.203-12.478-14.651-20.043-19.025c-7.311-4.227-20.234-1.604-26.49-7.859c-5.004-5.005-1.333-16.551-4.715-22.4 c-3.5-6.052-15.29-8.675-17.051-15.275c-1.788-6.695,7.15-14.869,7.15-21.753s-8.937-15.058-7.149-21.753 c1.762-6.6,13.552-9.224,17.051-15.275c3.382-5.849-0.29-17.396,4.715-22.4c4.003-4.003,14.449,0.506,19.128-2.199 c4.841-2.799,6.182-14.063,11.462-15.473c5.356-1.43,12.153,7.687,17.66,7.687c5.507,0,12.305-9.116,17.661-7.686 c5.28,1.41,6.62,12.673,11.462,15.472c4.679,2.706,15.123-1.804,19.127,2.199c3.203,3.203-1.978,12.767,0.187,16.51 c2.239,3.874,13.083,4.188,14.211,8.412c1.144,4.285-8.115,9.979-8.116,14.386c0,4.406,9.26,10.102,8.115,14.386 c-1.127,4.224-11.971,4.539-14.21,8.412c-2.164,3.743,3.017,13.306-0.187,16.509c-2.563,2.563-11.42-3.155-14.415-1.424 c-3.099,1.791-2.592,12.298-5.971,13.2c-3.428,0.915-8.242-8.459-11.767-8.459c-3.525,0-8.339,9.374-11.767,8.459 c-3.379-0.902-2.873-11.409-5.971-13.2c-2.995-1.731-11.854,3.986-14.416,1.424c-2.05-2.05,4.097-10.345,2.711-12.74 c-1.434-2.479-11.669-1.314-12.391-4.018c-0.732-2.742,8.732-6.852,8.732-9.672s-9.465-6.929-8.733-9.671 c0.722-2.703,10.959-1.539,12.392-4.018c1.385-2.396-4.762-10.69-2.712-12.74c1.64-1.64,9.483,4.85,11.4,3.742 c1.983-1.146,0.294-11.168,2.457-11.746c2.194-0.585,5.739,8.953,7.994,8.953c2.256,0,5.801-9.538,7.995-8.952 c2.162,0.578,0.472,10.599,2.455,11.745c1.917,1.108,9.761-5.381,11.4-3.742c1.312,1.312-5.454,8.793-4.567,10.327 c0.917,1.586,10.767-0.524,11.229,1.206c0.469,1.755-9.128,4.849-9.128,6.653c-0.001,1.805,9.597,4.9,9.128,6.655 c-0.462,1.73-10.312-0.38-11.229,1.206c-0.887,1.534,5.878,9.016,4.566,10.328c-1.05,1.049-8.243-5.936-9.47-5.226 c-1.27,0.734,1.177,10.445-0.207,10.815c-1.404,0.374-4.137-9.269-5.58-9.269c-1.444,0-4.177,9.643-5.581,9.269 c-1.384-0.37,1.062-10.081-0.207-10.815c-1.227-0.709-8.42,6.275-9.469,5.226c-0.84-0.84,6.321-7.802,5.754-8.783 c-0.587-1.016-10.188,1.7-10.483,0.593c-0.3-1.123,9.38-3.567,9.38-4.722c0-1.155-9.681-3.6-9.381-4.723 c0.295-1.107,9.896,1.607,10.483,0.592c0.567-0.981-6.594-7.943-5.754-8.783" stroke="#0d47a1" stroke-width="2" fill="none" /&gt;&lt;/svg&gt;
+
+</pre>
+
+				<h2>stroke-linecap / stroke-dasharray</h2>
+				<div class="well clearfix">
+					<div class="block1">
+						<svg style="background: #fff3e0">
+							<path stroke="#e65100" stroke-width="1" fill="none" d="M30 30 l140 00" />
+							<path stroke="#e65100" stroke-width="2" fill="none" d="M30 50 l140 00" />
+							<path stroke="#e65100" stroke-width="3" fill="none" d="M30 70 l140 00" />
+							<path stroke="#e65100" stroke-width="4" fill="none" d="M30 90 l140 00" />
+							<path stroke="#e65100" stroke-width="5" fill="none" d="M30 110 l140 00" />
+							<path stroke="#e65100" stroke-width="6" fill="none" d="M30 130 l140 00" />
+							<path stroke="#e65100" stroke-width="7" fill="none" d="M30 150 l140 00" />
+							<path stroke="#e65100" stroke-width="8" fill="none" d="M30 170 l140 00" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #fff3e0">
+							<path stroke="#e65100" stroke-linecap="round" stroke-width="1" fill="none" d="M30 30 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-width="2" fill="none" d="M30 50 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-width="3" fill="none" d="M30 70 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-width="4" fill="none" d="M30 90 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-width="5" fill="none" d="M30 110 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-width="6" fill="none" d="M30 130 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-width="7" fill="none" d="M30 150 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-width="8" fill="none" d="M30 170 l140 00" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #fff3e0">
+							<path stroke="#e65100" stroke-linecap="butt" stroke-width="1" fill="none" d="M30 30 l140 00" />
+							<path stroke="#e65100" stroke-linecap="square" stroke-width="2" fill="none" d="M30 50 l140 00" />
+							<path stroke="#e65100" stroke-linecap="butt" stroke-width="3" fill="none" d="M30 70 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-width="4" fill="none" d="M30 90 l140 00" />
+							<path stroke="#e65100" stroke-linecap="butt" stroke-width="5" fill="none" d="M30 110 l140 00" />
+							<path stroke="#e65100" stroke-linecap="square" stroke-width="6" fill="none" d="M30 130 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-width="7" fill="none" d="M30 150 l140 00" />
+							<path stroke="#e65100" stroke-linecap="butt" stroke-width="8" fill="none" d="M30 170 l140 00" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #fff3e0">
+							<path stroke="#e65100" stroke-dasharray="5,5" stroke-width="1" fill="none" d="M30 30 l140 00" />
+							<path stroke="#e65100" stroke-dasharray="5,5" stroke-width="2" fill="none" d="M30 50 l140 00" />
+							<path stroke="#e65100" stroke-dasharray="5,5" stroke-width="3" fill="none" d="M30 70 l140 00" />
+							<path stroke="#e65100" stroke-dasharray="5,5" stroke-width="4" fill="none" d="M30 90 l140 00" />
+							<path stroke="#e65100" stroke-dasharray="5,5" stroke-width="5" fill="none" d="M30 110 l140 00" />
+							<path stroke="#e65100" stroke-dasharray="5,5" stroke-width="6" fill="none" d="M30 130 l140 00" />
+							<path stroke="#e65100" stroke-dasharray="5,5" stroke-width="7" fill="none" d="M30 150 l140 00" />
+							<path stroke="#e65100" stroke-dasharray="5,5" stroke-width="8" fill="none" d="M30 170 l140 00" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #fff3e0">
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="0,15" stroke-width="1" fill="none" d="M30 30 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="0,15" stroke-width="2" fill="none" d="M30 50 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="0,15" stroke-width="3" fill="none" d="M30 70 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="0,15" stroke-width="4" fill="none" d="M30 90 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="0,15" stroke-width="5" fill="none" d="M30 110 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="0,15" stroke-width="6" fill="none" d="M30 130 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="0,15" stroke-width="7" fill="none" d="M30 150 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="0,15" stroke-width="8" fill="none" d="M30 170 l140 00" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #fff3e0">
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="10,10" stroke-width="1" fill="none" d="M30 30 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="10,10" stroke-width="2" fill="none" d="M30 50 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="10,10" stroke-width="3" fill="none" d="M30 70 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="10,10" stroke-width="4" fill="none" d="M30 90 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="10,10" stroke-width="5" fill="none" d="M30 110 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="10,10" stroke-width="6" fill="none" d="M30 130 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="10,10" stroke-width="7" fill="none" d="M30 150 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="10,10" stroke-width="8" fill="none" d="M30 170 l140 00" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #fff3e0">
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="20,10,1,5,5,10" stroke-width="1" fill="none" d="M30 30 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="20,10,1,5,5,10" stroke-width="2" fill="none" d="M30 50 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="20,10,1,5,5,10" stroke-width="3" fill="none" d="M30 70 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="20,10,1,5,5,10" stroke-width="4" fill="none" d="M30 90 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="20,10,1,5,5,10" stroke-width="5" fill="none" d="M30 110 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="20,10,1,5,5,10" stroke-width="6" fill="none" d="M30 130 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="20,10,1,5,5,10" stroke-width="7" fill="none" d="M30 150 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="20,10,1,5,5,10" stroke-width="8" fill="none" d="M30 170 l140 00" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg style="background: #fff3e0">
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="50,10,100" stroke-width="1" fill="none" d="M30 30 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="50,10,100" stroke-width="2" fill="none" d="M30 50 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="50,10,100" stroke-width="3" fill="none" d="M30 70 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="50,10,100" stroke-width="4" fill="none" d="M30 90 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="50,10,100" stroke-width="5" fill="none" d="M30 110 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="50,10,100" stroke-width="6" fill="none" d="M30 130 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="50,10,100" stroke-width="7" fill="none" d="M30 150 l140 00" />
+							<path stroke="#e65100" stroke-linecap="round" stroke-dasharray="50,10,100" stroke-width="8" fill="none" d="M30 170 l140 00" />
+						</svg>
+					</div>
+				</div>
+				
+				<br>
+				<h2>Linear Gradient</h2>
+				<div class="well clearfix">
+					<div class="block1">
+						<svg width="200" height="20" style="background:#fff3e0">
+							<linearGradient id="linearGradient" gradientUits="userSpaceInUse">
+								<stop offset="0" style="stop-color:#74ebd5" />
+								<stop offset="1" style="stop-color:#9face6" />
+							</linearGradient>
+							<circle cx="100" cy="100" r="80" fill="url(#linearGradient)">
+						</svg>
+					</div>
+					<div class="block1">
+						<svg width="200" height="20" style="background:#fff3e0">
+							<rect x="30" y="30" width="140" height="140" fill="url(#linearGradient)">
+						</svg>
+					</div>
+					<div class="block1">
+						<svg width="200" height="20" style="background:#fff3e0">
+							<polygon fill="url(#linearGradient)" stroke-width="5" points="21.369,116.904 157.512,15.096 177.608,183.904 " />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg width="200" height="20" style="background:#fff3e0">
+							<polygon fill="url(#linearGradient)" stroke-width="1" points="101,14.024 127.799,68.323 187.72,77.031 144.359,119.296 154.596,178.976 101,150.798 47.404,178.976 57.64,119.296 14.28,77.031 74.202,68.323 " />
+						</svg>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+&lt;svg width="200" height="20" style="background:#fff3e0"&gt;
+	&lt;linearGradient id="linearGradient" gradientUits="userSpaceInUse"&gt;
+		&lt;stop offset="0" style="stop-color:#74ebd5" /&gt;
+		&lt;stop offset="1" style="stop-color:#9face6" /&gt;
+	&lt;/linearGradient&gt;
+	&lt;circle cx="100" cy="100" r="80" fill="url(#linearGradient)"&gt;
+&lt;/svg&gt;
+
+&lt;svg width="200" height="20" style="background:#fff3e0"&gt;
+	&lt;rect x="30" y="30" width="140" height="140" fill="url(#linearGradient)"&gt;
+&lt;/svg&gt;
+
+&lt;svg width="200" height="20" style="background:#fff3e0"&gt;
+	&lt;polygon fill="url(#linearGradient)" stroke-width="5" points="21.369,116.904 157.512,15.096 177.608,183.904 " /&gt;
+&lt;/svg&gt;
+
+&lt;svg width="200" height="20" style="background:#fff3e0"&gt;
+	&lt;polygon fill="url(#linearGradient)" stroke-width="1" points="101,14.024 127.799,68.323 187.72,77.031 144.359,119.296 154.596,178.976 101,150.798 47.404,178.976 57.64,119.296 14.28,77.031 74.202,68.323 " /&gt;
+&lt;/svg&gt;	
+</pre>
+
+				<br>
+				<h2>Radial Gradient</h2>
+				<div class="well clearfix">
+					<div class="block1">
+						<svg width="200" height="20" style="background:#fff3e0">
+							<radialGradient id="radialGradient1" gradientUnits="userSpaceOnUse">
+								<stop offset="0" style="stop-color:#74ebd5" />
+								<stop offset="1" style="stop-color:#9face6" />
+							</radialGradient>
+							<circle cx="100" cy="100" r="80" fill="url(#radialGradient1)">
+						</svg>
+					</div>
+					<div class="block1">
+						<svg width="200" height="20" style="background:#fff3e0">
+							<rect x="30" y="30" width="140" height="140" fill="url(#radialGradient1)">
+						</svg>
+					</div>
+					<div class="block1">
+						<svg width="200" height="20" style="background:#fff3e0">
+							<polygon fill="url(#radialGradient1)" stroke-width="5" points="21.369,116.904 157.512,15.096 177.608,183.904 " />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg width="200" height="20" style="background:#fff3e0">
+							<polygon fill="url(#radialGradient1)" stroke-width="1" points="101,14.024 127.799,68.323 187.72,77.031 144.359,119.296 154.596,178.976 101,150.798 47.404,178.976 57.64,119.296 14.28,77.031 74.202,68.323 " />
+						</svg>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+&lt;svg width="200" height="20" style="background:#fff3e0"&gt;
+	&lt;radialGradient id="radialGradient1" gradientUnits="userSpaceOnUse"&gt;
+		&lt;stop offset="0" style="stop-color:#74ebd5" /&gt;
+		&lt;stop offset="1" style="stop-color:#9face6" /&gt;
+	&lt;/radialGradient&gt;
+	&lt;circle cx="100" cy="100" r="80" fill="url(#radialGradient1)"&gt;
+&lt;/svg&gt;
+
+&lt;svg width="200" height="20" style="background:#fff3e0"&gt;
+	&lt;rect x="30" y="30" width="140" height="140" fill="url(#radialGradient1)"&gt;
+&lt;/svg&gt;
+
+&lt;svg width="200" height="20" style="background:#fff3e0"&gt;
+	&lt;polygon fill="url(#radialGradient1)" stroke-width="5" points="21.369,116.904 157.512,15.096 177.608,183.904 " /&gt;
+&lt;/svg&gt;
+
+&lt;svg width="200" height="20" style="background:#fff3e0"&gt;
+	&lt;polygon fill="url(#radialGradient1)" stroke-width="1" points="101,14.024 127.799,68.323 187.72,77.031 144.359,119.296 154.596,178.976 101,150.798 47.404,178.976 57.64,119.296 14.28,77.031 74.202,68.323 " /&gt;
+&lt;/svg&gt;
+</pre>
+
+				<br>
+				<h2>Clip-path</h2>
+				<div class="well clearfix">
+					<div class="block1">
+						<svg width="200" height="200">
+							<image xlink:href="svg-01.jpg" width="200" height="200" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg width="200" height="200">
+							<image xlink:href="svg-01.jpg" width="200" height="200" clip-path="circle(100px at center)"/>
+						</svg>
+					</div>
+					<div class="block1">
+						<svg width="200" height="200">
+							<clipPath id="clippath1">
+								<polygon points="21.369,116.904 157.512,15.096 177.608,183.904 " />
+							</clipPath>	
+							<image xlink:href="svg-01.jpg" width="200" height="200" clip-path="url(#clippath1)"/>
+						</svg>
+					</div>
+					<div class="block1">
+						<svg width="200" height="200">
+							<clipPath id="clippath2">
+								<polygon points="101,14.024 127.799,68.323 187.72,77.031 144.359,119.296 154.596,178.976 101,150.798 47.404,178.976 57.64,119.296 14.28,77.031 74.202,68.323" />
+							</clipPath>
+							<image xlink:href="svg-01.jpg" width="200" height="200" clip-path="url(#clippath2)"/>
+						</svg>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+&lt;svg width="200" height="200"&gt;
+	&lt;image xlink:href="svg-01.jpg" width="200" height="200" /&gt;
+&lt;/svg&gt;
+
+&lt;svg width="200" height="200"&gt;
+	&lt;image xlink:href="svg-01.jpg" width="200" height="200" clip-path="circle(100px at center)"/&gt;
+&lt;/svg&gt;
+
+&lt;svg width="200" height="200"&gt;
+	&lt;clipPath id="clippath1"&gt;
+		&lt;polygon points="21.369,116.904 157.512,15.096 177.608,183.904 " /&gt;
+	&lt;/clipPath&gt;	
+	&lt;image xlink:href="svg-01.jpg" width="200" height="200" clip-path="url(#clippath1)"/&gt;
+&lt;/svg&gt;
+
+&lt;svg width="200" height="200"&gt;
+	&lt;clipPath id="clippath2"&gt;
+		&lt;polygon points="101,14.024 127.799,68.323 187.72,77.031 144.359,119.296 154.596,178.976 101,150.798 47.404,178.976 57.64,119.296 14.28,77.031 74.202,68.323" /&gt;
+	&lt;/clipPath&gt;
+	&lt;image xlink:href="svg-01.jpg" width="200" height="200" clip-path="url(#clippath2)"/&gt;
+&lt;/svg&gt;
+</pre>
+
+				<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+				<style>
+					.text-clip {
+						width: 200px; height: 200px; line-height: 200px;
+						text-align: center;
+						font-size: 70px;
+						font-family: 'Anton', sans-serif;
+						background: url(svg-01.jpg);
+						background-size: cover;
+						-webkit-text-fill-color:transparent;
+						-webkit-background-clip:text;
+					}
+				</style>
+				<br>
+				<h2>Text Clip-path</h2>
+				<div class="well clearfix">
+					<div class="block1">
+						<svg width="200" height="200" style="font-family: 'Anton', sans-serif;">
+							<text x="60" y="120" font-size="45">WEB</text>
+						</svg>
+					</div>
+					<div class="block1">
+						<svg width="200" height="200" style="font-family: 'Anton', sans-serif;">
+							<a xlink:href="http://ioio2034a.dothome.co.kr">
+								<text x="60" y="120" font-size="45">WEB</text>
+							</a>
+						</svg>
+					</div>
+					<div class="block1" style="background-color: #ffebee">
+						<div class="text-clip">
+							WEB
+						</div>
+					</div>
+					<div class="block1">
+						<svg width="200" height="200" style="font-family: 'Anton', sans-serif;">
+							<pattern id="pattern" patternUnits="userSpaceOnUse" width="200" height="200">
+								<image xlink:href="svg-01.jpg" width="200" height="200" />
+							</pattern>
+							<text x="60" y="120" font-size="45" fill="url(#pattern)">WEB</text>
+						</svg>
+					</div>
+				</div>
+<pre class="pre-show prettyprint linenums">
+&lt;style&gt;
+	.text-clip {
+		width: 200px; height: 200px; line-height: 200px;
+		text-align: center;
+		font-size: 70px;
+		font-family: 'Anton', sans-serif;
+		background: url(svg-01.jpg);
+		background-size: cover;
+		-webkit-text-fill-color:transparent;
+		-webkit-background-clip:text;
+	}
+&lt;/style&gt;
+&lt;svg width="200" height="200" style="font-family: 'Anton', sans-serif;"&gt;
+	&lt;text x="60" y="120" font-size="45"&gt;WEB&lt;/text&gt;
+&lt;/svg&gt;
+&lt;svg width="200" height="200" style="font-family: 'Anton', sans-serif;"&gt;
+	&lt;a xlink:href="http://ioio2034a.dothome.co.kr"&gt;
+		&lt;text x="60" y="120" font-size="45"&gt;WEB&lt;/text&gt;
+	&lt;/a&gt;
+&lt;/svg&gt;
+&lt;div class="text-clip"&gt;
+	WEB
+&lt;/div&gt;
+&lt;svg width="200" height="200" style="font-family: 'Anton', sans-serif;"&gt;
+	&lt;pattern id="pattern" patternUnits="userSpaceOnUse" width="200" height="200"&gt;
+		&lt;image xlink:href="svg-01.jpg" width="200" height="200" /&gt;
+	&lt;/pattern&gt;
+	&lt;text x="60" y="120" font-size="45" fill="url(#pattern)"&gt;WEB&lt;/text&gt;
+&lt;/svg&gt;
+</pre>
+
+				<style>
+					.rect1 > svg {background: #ffebee;}
+					.rect1 > svg rect {x:30px; y:30px; width: 140px; height: 140px; stroke:#880e41; stroke-width:5; fill:none; animation: rect1 4s infinite linear;}
+					.rect2 > svg rect {x:30px; y:30px; width: 140px; height: 140px; stroke:#880e41; stroke-width:5; fill:none; animation: rect2 4s infinite linear; stroke-dashoffset:100; stroke-dasharray:100;}
+					.rect3 > svg rect {x:30px; y:30px; width: 140px; height: 140px; stroke:#880e41; stroke-width:5; fill:none; animation: rect3 4s infinite linear; stroke-dashoffset:300; stroke-dasharray:300;}
+					.rect4 > svg rect {x:30px; y:30px; width: 140px; height: 140px; stroke:#880e41; stroke-width:5; fill:none; animation: rect4 4s infinite linear; stroke-dashoffset:560; stroke-dasharray:560;}
+					@keyframes rect1 {
+						0% {stroke:#880e41; stroke-width:5;}
+						35% {stroke:#1b5e20; stroke-width:5;}
+						70% {stroke:#e65100; stroke-width:5;}
+						100% {stroke:#880e41; stroke-width:5;}
+					}
+					@keyframes rect2 {
+						0% {stroke:#880e41; stroke-dashoffset:100;}
+						35% {stroke:#1b5e20; }
+						70% {stroke:#e65100; }
+						100% {stroke:#880e41; stroke-dashoffset:0;}
+					}
+					@keyframes rect3 {
+						0% {stroke:#880e41; stroke-dashoffset:300;}
+						35% {stroke:#1b5e20; }
+						70% {stroke:#e65100; }
+						100% {stroke:#880e41; stroke-dashoffset:0;}
+					}
+					@keyframes rect4 {
+						0% {stroke:#880e41; stroke-dashoffset:560;}
+						35% {stroke:#1b5e20; }
+						70% {stroke:#e65100; }
+						100% {stroke:#880e41; stroke-dashoffset:0;}
+					}
+				</style>
+				<br>
+				<h2>Animation</h2>
+				<div class="well clearfix">
+					<div class="block1 rect1">
+						<svg><rect /></svg>
+					</div>
+					<div class="block1 rect2">
+						<svg><rect /></svg>
+					</div>
+					<div class="block1 rect3">
+						<svg><rect /></svg>
+					</div>
+					<div class="block1 rect4">
+						<svg><rect /></svg>
+					</div>
+				</div>
+
+				<style>
+					.path1 {animation: path1 2s infinite linear; stroke-dasharray: 268px; stroke-dashoffset: 268px;}
+					.path2 {animation: path2 2s infinite linear; stroke-dasharray: 739px; stroke-dashoffset: 739px;}
+					.path3 {animation: path3 2s infinite linear; stroke-dasharray: 1485px; stroke-dashoffset: 1485px;}
+					.path4 {animation: path4 2s infinite linear; stroke-dasharray: 2045px; stroke-dashoffset: 2045px;}
+					.path5 {animation: path5 2s infinite linear; stroke-dasharray: 679px; stroke-dashoffset: 679px;}
+					.path6 {animation: path6 2s infinite linear; stroke-dasharray: 1424px; stroke-dashoffset: 1424px;}
+					.path7 {animation: path7 2s infinite linear; stroke-dasharray: 869px; stroke-dashoffset: 869px;}
+					.path8 {animation: path8 2s infinite linear; stroke-dasharray: 974px; stroke-dashoffset: 974px;}
+					@keyframes path1{
+						0% {stroke-dashoffset:268px;}
+						100% {stroke-dashoffset: 0px;}
+					}
+					@keyframes path2{
+						0% {stroke-dashoffset:739px;}
+						100% {stroke-dashoffset: 0px;}
+					}
+					@keyframes path3{
+						0% {stroke-dashoffset:1485px;}
+						100% {stroke-dashoffset: 0px;}
+					}
+					@keyframes path4{
+						0% {stroke-dashoffset:2045px;}
+						100% {stroke-dashoffset: 0px;}
+					}
+					@keyframes path5{
+						0% {stroke-dashoffset:679px;}
+						100% {stroke-dashoffset: 0px;}
+					}
+					@keyframes path6{
+						0% {stroke-dashoffset:1424px;}
+						100% {stroke-dashoffset: 0px;}
+					}
+					@keyframes path7{
+						0% {stroke-dashoffset:869px;}
+						100% {stroke-dashoffset: 0px;}
+					}
+					@keyframes path8{
+						0% {stroke-dashoffset:974px;}
+						100% {stroke-dashoffset: 0px;}
+					}
+				</style>
+				<div class="well clearfix">
+					<div class="block1">
+						<svg width="200" height="200" style="background:#e3f2fd">
+							<path class="path1" d="M14.5,14.5c0,94.518,76.482,171,171,171" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg width="200" height="200" style="background:#e3f2fd">
+							<path class="path2" d="M177.73,174.021c-50.258,29.271-114.729,12.258-144-38
+	c-23.417-40.207-9.806-91.784,30.4-115.201c32.165-18.733,73.426-7.845,92.16,24.32c14.987,25.732,6.276,58.742-19.455,73.728
+	c-20.586,11.99-46.994,5.021-58.983-15.564c-9.591-16.469-4.017-37.595,12.452-47.187c13.175-7.673,30.076-3.213,37.749,9.961
+	c6.139,10.54,2.571,24.061-7.97,30.199c-8.432,4.912-19.248,2.057-24.159-6.375c-3.929-6.746-1.646-15.398,5.1-19.327" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg width="200" height="200" style="background: #e3f3fd">
+							<path class="path3" d="M97.376,106.333c-46.416,112.054-115.763,42.703-3.71-3.71
+		c-112.053,46.413-112.053-51.663,0-5.247c-112.053-46.416-42.706-115.763,3.71-3.71c-46.416-112.053,51.66-112.053,5.247,0
+		c46.413-112.053,115.764-42.706,3.71,3.71c112.054-46.416,112.054,51.66,0,5.247c112.054,46.413,42.703,115.764-3.71,3.71
+		C149.036,218.387,50.96,218.387,97.376,106.333z" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg  width="200" height="200" style="background: #e3f3fd">
+							<path class="path4" d="M78.065,181.855c29.246-109.141,41.909-101.83-37.989-21.932
+		c79.898-79.898,87.209-67.234-21.932-37.992c109.141-29.242,109.141-14.62,0-43.866c109.141,29.246,101.83,41.909,21.932-37.989
+		c79.898,79.898,67.235,87.209,37.989-21.932c29.246,109.141,14.624,109.141,43.866,0c-29.242,109.141-41.906,101.83,37.992,21.932
+		c-79.898,79.898-87.209,67.235,21.932,37.989c-109.141,29.246-109.141,14.624,0,43.866
+		c-109.141-29.242-101.83-41.906-21.932,37.992c-79.898-79.898-67.234-87.209-37.992,21.932
+		C92.689,72.715,107.312,72.715,78.065,181.855z" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg  width="200" height="200" style="background: #e3f3fd">
+							<path class="path5" d="M32.571,18.429c2.401,2.401-11.741,16.544-9.34,18.945
+		c2.403,2.403,16.545-11.739,18.949-9.336c2.401,2.401-11.741,16.544-9.34,18.945c2.401,2.401,16.543-11.741,18.945-9.34
+		c2.402,2.402-11.741,16.544-9.339,18.946c2.403,2.403,16.545-11.74,18.948-9.337c2.401,2.402-11.741,16.544-9.339,18.946
+		C54.457,68.6,68.6,54.457,71.001,56.859c2.403,2.403-11.739,16.545-9.336,18.949c2.402,2.402,16.544-11.74,18.947-9.338
+		c2.403,2.403-11.739,16.545-9.336,18.949c2.402,2.402,16.545-11.74,18.947-9.338c2.403,2.403-11.74,16.545-9.337,18.948
+		s16.545-11.74,18.948-9.337c2.403,2.404-11.739,16.546-9.335,18.949c2.403,2.403,16.545-11.739,18.948-9.337
+		c2.403,2.404-11.739,16.546-9.335,18.95c2.404,2.403,16.546-11.738,18.95-9.335c2.403,2.403-11.739,16.546-9.336,18.949
+		c2.401,2.401,16.544-11.741,18.945-9.34c2.403,2.403-11.739,16.546-9.336,18.949c2.402,2.402,16.545-11.74,18.947-9.338
+		c2.402,2.403-11.739,16.545-9.337,18.948c2.404,2.404,16.547-11.738,18.951-9.334s-11.738,16.547-9.334,18.951
+		s16.547-11.738,18.951-9.334c2.403,2.403-11.739,16.546-9.336,18.949c2.404,2.404,16.547-11.738,18.951-9.334
+		c2.405,2.406-11.736,16.548-9.331,18.954c2.408,2.407,16.55-11.734,18.958-9.327c2.407,2.408-11.734,16.55-9.327,18.958" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg width="200" height="200" style="background: #e3f3fd">
+							<path class="path6" d="M100,18.893C100,100,100,100,118.512,65.783
+		C100,100,100,100,166.717,51.02C100,100,100,100,141.598,94.73C100,100,100,100,183.193,123.213C100,100,100,100,133.359,130.826
+		C100,100,100,100,137.025,181.107C100,100,100,100,100,146.891C100,100,100,100,62.976,181.107C100,100,100,100,66.642,130.826
+		C100,100,100,100,16.807,123.213C100,100,100,100,58.403,94.73C100,100,100,100,33.284,51.02C100,100,100,100,81.487,65.783
+		C100,100,100,100,100,18.893z" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg width="200" height="200" style="background: #e3f3fd">
+							<path class="path7" d="M106,184c-23-13-41-34-43-61c-16,5-24,23-23,39c-6-25-3-55,17-74
+		c-14-9-31-3-43,6c14-22,41-36,67-34c0-16-15-26-29-30c26-1,53,10,67,33c1-2,3-3,5-5c9-10,6-24,3-36c15,20,22,48,12,72
+		c15,6,30-5,38-17c-6,24-25,47-50,51c4,16,24,21,39,20c-24,10-52,8-73-8C87,156,94,173,106,184L106,184z" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+					<div class="block1">
+						<svg width="200" height="200" style="background: #e3f3fd">
+							<path class="path8" d="M184.978,154.219c-6.256,6.256-19.179,3.634-26.49,7.861
+		c-7.565,4.374-11.793,16.821-20.043,19.023c-8.369,2.234-18.264-6.479-26.869-6.479c-8.604,0-18.5,8.714-26.869,6.479
+		c-8.25-2.203-12.478-14.651-20.043-19.025c-7.311-4.227-20.234-1.604-26.49-7.859c-5.004-5.005-1.333-16.551-4.715-22.4
+		c-3.5-6.052-15.29-8.675-17.051-15.275c-1.788-6.695,7.15-14.869,7.15-21.753s-8.937-15.058-7.149-21.753
+		c1.762-6.6,13.552-9.224,17.051-15.275c3.382-5.849-0.29-17.396,4.715-22.4c4.003-4.003,14.449,0.506,19.128-2.199
+		c4.841-2.799,6.182-14.063,11.462-15.473c5.356-1.43,12.153,7.687,17.66,7.687c5.507,0,12.305-9.116,17.661-7.686
+		c5.28,1.41,6.62,12.673,11.462,15.472c4.679,2.706,15.123-1.804,19.127,2.199c3.203,3.203-1.978,12.767,0.187,16.51
+		c2.239,3.874,13.083,4.188,14.211,8.412c1.144,4.285-8.115,9.979-8.116,14.386c0,4.406,9.26,10.102,8.115,14.386
+		c-1.127,4.224-11.971,4.539-14.21,8.412c-2.164,3.743,3.017,13.306-0.187,16.509c-2.563,2.563-11.42-3.155-14.415-1.424
+		c-3.099,1.791-2.592,12.298-5.971,13.2c-3.428,0.915-8.242-8.459-11.767-8.459c-3.525,0-8.339,9.374-11.767,8.459
+		c-3.379-0.902-2.873-11.409-5.971-13.2c-2.995-1.731-11.854,3.986-14.416,1.424c-2.05-2.05,4.097-10.345,2.711-12.74
+		c-1.434-2.479-11.669-1.314-12.391-4.018c-0.732-2.742,8.732-6.852,8.732-9.672s-9.465-6.929-8.733-9.671
+		c0.722-2.703,10.959-1.539,12.392-4.018c1.385-2.396-4.762-10.69-2.712-12.74c1.64-1.64,9.483,4.85,11.4,3.742
+		c1.983-1.146,0.294-11.168,2.457-11.746c2.194-0.585,5.739,8.953,7.994,8.953c2.256,0,5.801-9.538,7.995-8.952
+		c2.162,0.578,0.472,10.599,2.455,11.745c1.917,1.108,9.761-5.381,11.4-3.742c1.312,1.312-5.454,8.793-4.567,10.327
+		c0.917,1.586,10.767-0.524,11.229,1.206c0.469,1.755-9.128,4.849-9.128,6.653c-0.001,1.805,9.597,4.9,9.128,6.655
+		c-0.462,1.73-10.312-0.38-11.229,1.206c-0.887,1.534,5.878,9.016,4.566,10.328c-1.05,1.049-8.243-5.936-9.47-5.226
+		c-1.27,0.734,1.177,10.445-0.207,10.815c-1.404,0.374-4.137-9.269-5.58-9.269c-1.444,0-4.177,9.643-5.581,9.269
+		c-1.384-0.37,1.062-10.081-0.207-10.815c-1.227-0.709-8.42,6.275-9.469,5.226c-0.84-0.84,6.321-7.802,5.754-8.783
+		c-0.587-1.016-10.188,1.7-10.483,0.593c-0.3-1.123,9.38-3.567,9.38-4.722c0-1.155-9.681-3.6-9.381-4.723
+		c0.295-1.107,9.896,1.607,10.483,0.592c0.567-0.981-6.594-7.943-5.754-8.783" stroke="#0d47a1" stroke-width="2" fill="none" />
+						</svg>
+					</div>
+				</div>
+
+				<style>
+					.leejinhee path {
+						animation: ani1 4.5s infinite linear; stroke-dasharray:670px; stroke-dashoffset:670px;
+						stroke-width:2px;
+						stroke: #4527a0 ;
+						fill:none;
+					}
+					@keyframes ani1 {
+						0% {stroke-dashoffset:670px;}
+						100% {stroke-dashoffset:0px;}
+					}
+				</style>
+				<div class="well clearfix">
+					<div class="block">
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1170px" height="600px" viewBox="0 0 1170 600" enable-background="new 0 0 1170 600" xml:space="preserve">
+							<g class="leejinhee">
+								<path d="M203.382,207.404v135.452c0,1.862,0.564,3.292,1.695,4.289c1.662,1.331,3.69,1.995,6.084,1.995h9.875v7.48h-52.964v-7.48
+									h9.376c3.058,0,5.336-0.731,6.833-2.194c1.496-1.462,2.244-3.524,2.244-6.185V227.053c0-3.324-0.897-5.75-2.693-7.281
+									c-2.461-2.127-5.486-3.191-9.077-3.191h-8.378V209.1L203.382,207.404z"/>
+								<path d="M320.082,310.539h-66.928c0.332,14.23,2.992,24.271,7.979,30.122c5.718,6.583,13,9.875,21.844,9.875
+									c13.032,0,23.505-7.414,31.419-22.243l6.483,2.793c-9.709,18.886-23.739,28.327-42.092,28.327
+									c-12.502,0-23.025-4.521-31.569-13.565c-8.545-9.042-12.817-20.612-12.817-34.711c0-15.16,4.205-27.412,12.618-36.755
+									c8.411-9.342,18.767-14.014,31.07-14.014c9.042,0,16.857,2.329,23.44,6.982c6.583,4.655,11.536,11.338,14.862,20.048
+									C318.718,293.517,319.948,301.229,320.082,310.539z M253.154,303.457h40.496c2.394,0,4.255-0.813,5.585-2.444
+									c1.33-1.628,1.995-4.404,1.995-8.328c0-7.314-2.279-13.531-6.833-18.652c-4.556-5.12-9.924-7.68-16.108-7.68
+									c-6.917,0-12.785,3.092-17.605,9.276C255.863,281.813,253.354,291.089,253.154,303.457z"/>
+								<path d="M422.219,310.539h-66.928c0.332,14.23,2.992,24.271,7.979,30.122c5.718,6.583,13,9.875,21.844,9.875
+									c13.032,0,23.505-7.414,31.419-22.243l6.483,2.793c-9.709,18.886-23.739,28.327-42.092,28.327
+									c-12.502,0-23.025-4.521-31.569-13.565c-8.545-9.042-12.817-20.612-12.817-34.711c0-15.16,4.205-27.412,12.618-36.755
+									c8.411-9.342,18.767-14.014,31.07-14.014c9.042,0,16.857,2.329,23.44,6.982c6.583,4.655,11.536,11.338,14.862,20.048
+									C420.855,293.517,422.085,301.229,422.219,310.539z M355.292,303.457h40.496c2.394,0,4.255-0.813,5.585-2.444
+									c1.33-1.628,1.995-4.404,1.995-8.328c0-7.314-2.279-13.531-6.833-18.652c-4.556-5.12-9.924-7.68-16.108-7.68
+									c-6.917,0-12.785,3.092-17.605,9.276C358,281.813,355.491,291.089,355.292,303.457z"/>
+								<path d="M471.691,261.764v89.37c0,13.032-3.558,23.839-10.672,32.417c-7.116,8.578-15.029,12.867-23.739,12.867
+									c-4.389,0-7.779-1.082-10.174-3.242c-2.394-2.161-3.591-5.104-3.591-8.827c0-3.259,0.965-5.885,2.893-7.88
+									c1.93-1.994,4.354-2.992,7.281-2.992c4.653,0,7.681,3.025,9.077,9.077c0.464,1.994,0.93,3.241,1.396,3.74
+									c0.465,0.499,1.197,0.748,2.195,0.748c1.196,0,2.359-0.565,3.49-1.695c1.597-1.73,2.858-4.623,3.791-8.678
+									c1.196-5.586,1.795-11.106,1.795-16.558v-78.698c0-3.656-1.132-6.449-3.392-8.378c-2.261-1.928-5.619-2.893-10.074-2.893h-8.478
+									v-6.982L471.691,261.764z M461.718,207.205c3.257,0,5.95,1.047,8.079,3.142c2.127,2.095,3.191,4.738,3.191,7.93
+									c0,3.259-1.064,5.952-3.191,8.079c-2.129,2.129-4.788,3.192-7.979,3.192c-3.06,0-5.72-1.113-7.979-3.341
+									c-2.262-2.227-3.392-4.837-3.392-7.83c0-2.992,1.13-5.601,3.392-7.83C456.098,208.319,458.726,207.205,461.718,207.205z"/>
+								<path d="M495.331,263.161l37.204-1.097v80.394c0,2.194,0.531,3.757,1.596,4.688c1.529,1.331,3.457,1.995,5.785,1.995h10.573v7.48
+									h-53.164v-7.48h9.875c2.926,0,5.07-0.714,6.434-2.145c1.362-1.43,2.045-3.507,2.045-6.234v-58.849c0-3.723-1.064-6.533-3.192-8.428
+									c-2.129-1.895-5.286-2.843-9.476-2.843h-7.68V263.161z M521.264,207.404c2.993,0,5.619,1.131,7.88,3.392
+									c2.26,2.261,3.392,4.921,3.392,7.979c0,2.992-1.098,5.585-3.292,7.78s-4.821,3.292-7.879,3.292c-3.06,0-5.703-1.113-7.93-3.341
+									c-2.229-2.227-3.342-4.837-3.342-7.83c0-2.992,1.13-5.618,3.392-7.879C515.744,208.535,518.337,207.404,521.264,207.404z"/>
+								<path d="M561.461,263.161l31.021-1.895c1.263,5.852,2.194,12.702,2.793,20.547c4.189-6.783,9.126-11.87,14.812-15.261
+									s12.119-5.087,19.301-5.087c6.184,0,11.37,1.214,15.56,3.641c4.189,2.428,7.546,6.268,10.074,11.521
+									c2.526,5.253,3.79,11.139,3.79,17.654v45.483c0,3.391,0.764,5.802,2.294,7.231c1.529,1.431,4.09,2.145,7.681,2.145h6.583v7.48
+									h-49.273v-7.48h4.688c4.389,0,7.446-0.698,9.176-2.095c1.729-1.396,2.594-3.491,2.594-6.284v-39.997
+									c0-8.71-1.331-15.161-3.99-19.35c-3.725-5.984-9.376-8.977-16.956-8.977c-7.515,0-13.782,3.027-18.802,9.077
+									c-5.021,6.052-7.53,13.931-7.53,23.639v34.611c0,3.391,0.78,5.802,2.344,7.231c1.562,1.431,4.14,2.145,7.73,2.145h6.483v7.48
+									h-49.474v-7.48h6.483c3.258,0,5.735-0.664,7.432-1.995c1.695-1.329,2.543-2.992,2.543-4.987v-60.345
+									c0-3.99-1.081-7.015-3.241-9.077c-2.162-2.06-5.271-3.092-9.326-3.092h-4.788V263.161z"/>
+								<path d="M683.847,209.1l35.409-1.696v72.015c4.92-6.384,10.206-11.154,15.858-14.313c5.651-3.157,11.636-4.738,17.954-4.738
+									c5.984,0,11.371,1.431,16.158,4.289c3.724,2.261,6.898,6.218,9.526,11.87c2.626,5.652,3.939,12.335,3.939,20.048v44.386
+									c0,2.86,0.73,4.938,2.194,6.234c1.462,1.297,3.756,1.945,6.882,1.945h7.979v7.48h-50.47v-7.48h5.586
+									c4.254,0,7.196-0.682,8.827-2.045c1.628-1.362,2.443-3.407,2.443-6.135v-44.386c0-7.78-1.879-13.847-5.636-18.203
+									c-3.757-4.354-8.562-6.533-14.412-6.533c-4.589,0-8.845,1.231-12.768,3.69c-3.924,2.461-7.249,6.201-9.975,11.221
+									c-2.728,5.021-4.089,10.323-4.089,15.909v37.304c0,3.326,0.698,5.686,2.095,7.082c1.396,1.396,3.69,2.095,6.882,2.095h7.979v7.48
+									h-49.373v-7.48h5.586c3.79,0,6.483-0.748,8.079-2.244s2.394-3.807,2.394-6.933V228.45c0-3.99-1.047-6.965-3.142-8.927
+									c-2.095-1.961-5.137-2.942-9.127-2.942h-6.782V209.1z"/>
+								<path d="M898.693,310.539h-66.928c0.332,14.23,2.992,24.271,7.979,30.122c5.718,6.583,12.999,9.875,21.844,9.875
+									c13.032,0,23.505-7.414,31.419-22.243l6.483,2.793c-9.709,18.886-23.739,28.327-42.092,28.327
+									c-12.502,0-23.025-4.521-31.568-13.565c-8.546-9.042-12.817-20.612-12.817-34.711c0-15.16,4.205-27.412,12.617-36.755
+									c8.411-9.342,18.768-14.014,31.07-14.014c9.042,0,16.856,2.329,23.439,6.982c6.583,4.655,11.536,11.338,14.862,20.048
+									C897.329,293.517,898.56,301.229,898.693,310.539z M831.766,303.457h40.495c2.395,0,4.255-0.813,5.586-2.444
+									c1.329-1.628,1.995-4.404,1.995-8.328c0-7.314-2.278-13.531-6.832-18.652c-4.556-5.12-9.925-7.68-16.109-7.68
+									c-6.916,0-12.784,3.092-17.604,9.276C834.474,281.813,831.965,291.089,831.766,303.457z"/>
+								<path d="M1000.831,310.539h-66.928c0.332,14.23,2.992,24.271,7.979,30.122c5.718,6.583,12.999,9.875,21.844,9.875
+									c13.032,0,23.505-7.414,31.419-22.243l6.483,2.793c-9.709,18.886-23.739,28.327-42.092,28.327
+									c-12.502,0-23.025-4.521-31.568-13.565c-8.546-9.042-12.817-20.612-12.817-34.711c0-15.16,4.205-27.412,12.617-36.755
+									c8.411-9.342,18.768-14.014,31.07-14.014c9.042,0,16.856,2.329,23.439,6.982c6.583,4.655,11.536,11.338,14.862,20.048
+									C999.467,293.517,1000.697,301.229,1000.831,310.539z M933.903,303.457h40.495c2.395,0,4.255-0.813,5.586-2.444
+									c1.329-1.628,1.995-4.404,1.995-8.328c0-7.314-2.278-13.531-6.832-18.652c-4.556-5.12-9.925-7.68-16.109-7.68
+									c-6.916,0-12.784,3.092-17.604,9.276C936.611,281.813,934.103,291.089,933.903,303.457z"/>
+							</g>
+						</svg>
+					</div>
+				</div>
+				<p data-height="400" data-theme-id="0" data-slug-hash="ZjOxVd" data-default-tab="result" data-user="Leejinhee2034" data-embed-version="2" data-pen-title="SVG - Text Animation" class="codepen">See the Pen <a href="https://codepen.io/Leejinhee2034/pen/ZjOxVd/">SVG - Text Animation</a> by Leejinhee (<a href="https://codepen.io/Leejinhee2034">@Leejinhee2034</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				<p data-height="400" data-theme-id="0" data-slug-hash="ZjOoJb" data-default-tab="result" data-user="Leejinhee2034" data-embed-version="2" data-pen-title="SVG - Text Animation2" class="codepen">See the Pen <a href="https://codepen.io/Leejinhee2034/pen/ZjOoJb/">SVG - Text Animation2</a> by Leejinhee (<a href="https://codepen.io/Leejinhee2034">@Leejinhee2034</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				<p data-height="600" data-theme-id="0" data-slug-hash="PBzaYr" data-default-tab="result" data-user="Leejinhee2034" data-embed-version="2" data-pen-title="Parallax - SVG" class="codepen">See the Pen <a href="https://codepen.io/Leejinhee2034/pen/PBzaYr/">Parallax - SVG</a> by Leejinhee (<a href="https://codepen.io/Leejinhee2034">@Leejinhee2034</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				<p data-height="265" data-theme-id="0" data-slug-hash="WKxyRx" data-default-tab="result" data-user="Leejinhee2034" data-embed-version="2" data-pen-title="SVG - Loading" class="codepen">See the Pen <a href="https://codepen.io/Leejinhee2034/pen/WKxyRx/">SVG - Loading</a> by Leejinhee (<a href="https://codepen.io/Leejinhee2034">@Leejinhee2034</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				<p data-height="400" data-theme-id="0" data-slug-hash="djXjZM" data-default-tab="result" data-user="Leejinhee2034" data-embed-version="2" data-pen-title="SVG - Text Animation3" class="codepen">See the Pen <a href="https://codepen.io/Leejinhee2034/pen/djXjZM/">SVG - Text Animation3</a> by Leejinhee (<a href="https://codepen.io/Leejinhee2034">@Leejinhee2034</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				<p data-height="400" data-theme-id="0" data-slug-hash="LBbeZG" data-default-tab="result" data-user="Leejinhee2034" data-embed-version="2" data-pen-title="Button Hover Effect : SVG" class="codepen">See the Pen <a href="https://codepen.io/Leejinhee2034/pen/LBbeZG/">Button Hover Effect : SVG</a> by Leejinhee (<a href="https://codepen.io/Leejinhee2034">@Leejinhee2034</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				<p data-height="400" data-theme-id="0" data-slug-hash="JBbMrX" data-default-tab="result" data-user="Leejinhee2034" data-embed-version="2" data-pen-title="Button Hover Effect : SVG2" class="codepen">See the Pen <a href="https://codepen.io/Leejinhee2034/pen/JBbMrX/">Button Hover Effect : SVG2</a> by Leejinhee (<a href="https://codepen.io/Leejinhee2034">@Leejinhee2034</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<style>
+					.svgBox > svg {width: 100%;}
+				</style>
+				<br>
+				<h2>SVG</h2>
+				<div class="well clearfix svgBox">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1000px" height="1000px" viewBox="0 0 2000 2000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+	<polygon fill="#FFFFFF" stroke="#000000" stroke-width="30" stroke-miterlimit="10" points="777.364,1678 959.923,1678 
+		965.278,1572 777.364,1572 	"/>
+	<path fill="#FFFFFF" stroke="#000000" stroke-width="30" stroke-miterlimit="10" d="M777.364,1840.005
+		c0,19.253,15.752,35.005,35.005,35.005h102.596c19.253,0,35.8-15.732,36.771-34.96l8.187-162.05H777.364V1840.005z"/>
+	<path fill="#FFFFFF" stroke="#000000" stroke-width="30" stroke-miterlimit="10" d="M1232.237,1226.001H812.369
+		c-19.253,0-35.005,15.752-35.005,35.005V1572h187.914l5.642-111.677c0.971-19.228,17.519-34.96,36.771-34.96h35.038
+		c19.253,0,35.8,15.732,36.771,34.96l19.184,379.727c0.972,19.228,17.519,34.96,36.771,34.96h96.781
+		c19.253,0,35.005-15.752,35.005-35.005v-578.999C1267.242,1241.753,1251.49,1226.001,1232.237,1226.001z"/>
+	<path fill="#FFFFFF" stroke="#000000" stroke-width="30" stroke-miterlimit="10" d="M846.628,818.988
+		c7.367-20.24-3.069-42.62-23.309-49.987c-20.24-7.366-42.62,3.069-49.987,23.31l-107.395,295.063l73.296,26.678L846.628,818.988z"
+		/>
+	<path fill="#FFFFFF" stroke="#000000" stroke-width="30" stroke-miterlimit="10" d="M665.938,1087.373l-23.256,63.896
+		c-7.367,20.242,3.069,42.621,23.309,49.986c20.24,7.367,42.62-3.066,49.987-23.309l23.256-63.896L665.938,1087.373z"/>
+	<path fill="#FFFFFF" stroke="#000000" stroke-width="30" stroke-miterlimit="10" d="M1189.226,818.988
+		c-7.367-20.24,3.068-42.62,23.309-49.987c20.24-7.366,42.62,3.069,49.986,23.31l107.395,295.063l-73.295,26.678L1189.226,818.988z"
+		/>
+	<path fill="#FFFFFF" stroke="#000000" stroke-width="30" stroke-miterlimit="10" d="M1369.915,1087.373l23.257,63.896
+		c7.366,20.242-3.069,42.621-23.309,49.986c-20.24,7.367-42.62-3.066-49.987-23.309l-23.256-63.896L1369.915,1087.373z"/>
+<rect x="944.427" y="682" fill="#FFFFFF" stroke="#000000" stroke-width="20.2365" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="151.433" height="212"/>
+	<path fill="#FFFFFF" d="M1326.7,677.225c0,19.25-0.201,35.399-0.448,35.888c-0.246,0.488-17.302,0.888-36.552,0.888H760.987
+		c-19.25,0-35.225-0.179-35.5-0.397s-0.5-17.128-0.5-36.378V402.775c0-19.25,0.202-35.399,0.448-35.888S742.737,366,761.987,366
+		H1289.7c19.25,0,35.45,0.179,36,0.397s1,17.128,1,36.378V677.225z"/>
+	<path fill="none" stroke="#000000" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M1326.7,677.225c0,19.25-0.201,35.399-0.448,35.888c-0.246,0.488-17.302,0.888-36.552,0.888H760.987
+		c-19.25,0-35.225-0.179-35.5-0.397s-0.5-17.128-0.5-36.378V402.775c0-19.25,0.202-35.399,0.448-35.888S742.737,366,761.987,366
+		H1289.7c19.25,0,35.45,0.179,36,0.397s1,17.128,1,36.378V677.225z"/>
+<path fill="#FFFFFF" stroke="#000000" stroke-width="30" stroke-miterlimit="10" d="M1288.092,518.517
+	c0,143.092-120.998,236.091-264.09,236.091c-143.092,0-264.091-93-264.091-236.091s120.999-259.091,264.091-259.091
+	C1167.094,259.426,1288.092,375.425,1288.092,518.517z"/>
+	<path fill="#FFFFFF" d="M1359.661,415.29c2.762,7.774-1.729,14.135-9.979,14.135H698.32c-8.25,0-12.741-6.361-9.979-14.135
+		l17.278-48.639c2.762-7.774,11.771-14.135,20.021-14.135h596.723c8.25,0,17.26,6.36,20.021,14.135L1359.661,415.29z"/>
+	<path fill="none" stroke="#000000" stroke-width="30" stroke-miterlimit="10" d="M1359.661,415.29
+		c2.762,7.774-1.729,14.135-9.979,14.135H698.32c-8.25,0-12.741-6.361-9.979-14.135l17.278-48.639
+		c2.762-7.774,11.771-14.135,20.021-14.135h596.723c8.25,0,17.26,6.36,20.021,14.135L1359.661,415.29z"/>
+<path fill="#FFFFFF" stroke="#000000" stroke-width="30" stroke-miterlimit="10" d="M715.468,352.517
+	c0-167.328,138.135-302.973,308.533-302.973c170.398,0,308.533,135.646,308.533,302.973H715.468z"/>	
+		<path fill="#FFFFFF" stroke="#000000" stroke-width="23.1348" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M1279.092,117.957V51.651c-20.581,11.829-37.92,28.662-50.363,48.835l50.363,50.363V117.957z"/>
+	
+		<path fill="#FFFFFF" stroke="#000000" stroke-width="23.1348" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M1279.092,150.85v69.658l69.435-69.434c-4.472-26.348-16.19-50.227-33.032-69.519l-36.402,36.403V150.85z"/>
+	
+		<path fill="#FFFFFF" stroke="#000000" stroke-width="23.1348" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M1315.494,81.554c-10.36-11.868-22.657-22.002-36.402-29.903v66.306L1315.494,81.554z"/>
+	
+		<path fill="#FFFFFF" stroke="#000000" stroke-width="23.1348" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M1279.092,220.507v30.958v46.956c42.695-24.541,71.446-70.605,71.446-123.385c0-8.167-0.689-16.173-2.012-23.963L1279.092,220.507z
+		"/>
+	
+		<path fill="#FFFFFF" stroke="#000000" stroke-width="23.1348" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M1279.092,220.507V150.85l-50.363-50.363c-13.369,21.678-21.084,47.212-21.084,74.55c0,1.697,0.031,3.389,0.09,5.071l71.357,71.358
+		V220.507z"/>
+	
+		<path fill="#FFFFFF" stroke="#000000" stroke-width="23.1348" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M1207.734,180.108c1.774,50.649,30.036,94.562,71.357,118.314v-46.956L1207.734,180.108z"/>
+			<path fill="#FFFFFF" d="M891.93,269.5c-8.25,0-17.707,6.184-21.015,13.741l-25.095,57.332
+				c-3.308,7.558,0.735,13.741,8.985,13.741h78.984c8.25,0,17.707-6.184,21.015-13.741l25.095-57.332
+				c3.308-7.558-0.735-13.741-8.985-13.741H891.93z"/>
+			<path fill="none" stroke="#000000" stroke-width="30" stroke-miterlimit="10" d="M891.93,269.5
+				c-8.25,0-17.707,6.184-21.015,13.741l-25.095,57.332c-3.308,7.558,0.735,13.741,8.985,13.741h78.984
+				c8.25,0,17.707-6.184,21.015-13.741l25.095-57.332c3.308-7.558-0.735-13.741-8.985-13.741H891.93z"/>
+			<path fill="#FFFFFF" d="M698.319,269.5c-8.25,0-15,6.75-15,15v54.814c0,8.25,6.75,15,15,15h17.501
+				c8.25,0,17.707-6.184,21.015-13.741l25.095-57.332c3.308-7.558-0.735-13.741-8.985-13.741H698.319z"/>
+			<path fill="none" stroke="#000000" stroke-width="30" stroke-miterlimit="10" d="M698.319,269.5c-8.25,0-15,6.75-15,15v54.814
+				c0,8.25,6.75,15,15,15h17.501c8.25,0,17.707-6.184,21.015-13.741l25.095-57.332c3.308-7.558-0.735-13.741-8.985-13.741H698.319z"
+				/>
+			<path fill="#FFFFFF" d="M782.945,269.5c-8.25,0-17.707,6.184-21.015,13.741l-25.095,57.332
+				c-3.308,7.558,0.735,13.741,8.985,13.741h78.984c8.25,0,17.707-6.184,21.015-13.741l25.095-57.332
+				c3.308-7.558-0.735-13.741-8.985-13.741H782.945z"/>
+			<path fill="none" stroke="#000000" stroke-width="30" stroke-miterlimit="10" d="M782.945,269.5
+				c-8.25,0-17.707,6.184-21.015,13.741l-25.095,57.332c-3.308,7.558,0.735,13.741,8.985,13.741h78.984
+				c8.25,0,17.707-6.184,21.015-13.741l25.095-57.332c3.308-7.558-0.735-13.741-8.985-13.741H782.945z"/>
+			<path fill="#FFFFFF" d="M1000.914,269.5c-8.25,0-17.707,6.184-21.015,13.741l-25.095,57.332
+				c-3.308,7.558,0.735,13.741,8.985,13.741h78.985c8.25,0,17.706-6.184,21.015-13.741l25.095-57.332
+				c3.308-7.558-0.735-13.741-8.985-13.741H1000.914z"/>
+			<path fill="none" stroke="#000000" stroke-width="30" stroke-miterlimit="10" d="M1000.914,269.5
+				c-8.25,0-17.707,6.184-21.015,13.741l-25.095,57.332c-3.308,7.558,0.735,13.741,8.985,13.741h78.985
+				c8.25,0,17.706-6.184,21.015-13.741l25.095-57.332c3.308-7.558-0.735-13.741-8.985-13.741H1000.914z"/>
+			<path fill="#FFFFFF" d="M1364.683,284.5c0-8.25-6.75-15-15-15h-21.814c-8.25,0-17.707,6.184-21.015,13.741l-25.096,57.332
+				c-3.308,7.558,0.735,13.741,8.985,13.741h58.939c8.25,0,15-6.75,15-15V284.5z"/>
+			<path fill="none" stroke="#000000" stroke-width="30" stroke-miterlimit="10" d="M1364.683,284.5c0-8.25-6.75-15-15-15h-21.814
+				c-8.25,0-17.707,6.184-21.015,13.741l-25.096,57.332c-3.308,7.558,0.735,13.741,8.985,13.741h58.939c8.25,0,15-6.75,15-15V284.5z
+				"/>
+			<path fill="#FFFFFF" d="M1218.883,269.5c-8.25,0-17.707,6.184-21.015,13.741l-25.095,57.332
+				c-3.309,7.558,0.735,13.741,8.985,13.741h78.984c8.25,0,17.707-6.184,21.015-13.741l25.096-57.332
+				c3.308-7.558-0.735-13.741-8.985-13.741H1218.883z"/>
+			<path fill="none" stroke="#000000" stroke-width="30" stroke-miterlimit="10" d="M1218.883,269.5
+				c-8.25,0-17.707,6.184-21.015,13.741l-25.095,57.332c-3.309,7.558,0.735,13.741,8.985,13.741h78.984
+				c8.25,0,17.707-6.184,21.015-13.741l25.096-57.332c3.308-7.558-0.735-13.741-8.985-13.741H1218.883z"/>
+			<path fill="#FFFFFF" d="M1109.898,269.5c-8.25,0-17.707,6.184-21.015,13.741l-25.095,57.332
+				c-3.309,7.558,0.735,13.741,8.985,13.741h78.984c8.25,0,17.706-6.184,21.015-13.741l25.095-57.332
+				c3.308-7.558-0.735-13.741-8.985-13.741H1109.898z"/>
+			<path fill="none" stroke="#000000" stroke-width="30" stroke-miterlimit="10" d="M1109.898,269.5
+				c-8.25,0-17.707,6.184-21.015,13.741l-25.095,57.332c-3.309,7.558,0.735,13.741,8.985,13.741h78.984
+				c8.25,0,17.706-6.184,21.015-13.741l25.095-57.332c3.308-7.558-0.735-13.741-8.985-13.741H1109.898z"/>
+<circle cx="872.805" cy="532" r="25"/>
+<circle cx="1182.759" cy="532" r="25"/>
+	<path fill="#FFFFFF" d="M800.588,1319.218c0-15.675,13.5-28.5,30-28.5h375.938c16.5,0,30,12.825,30,28.5s13.5,28.5,30,28.5h18.031
+		c16.5,0,28.674-13.435,27.053-29.854l-52.548-532.291c-1.621-16.42-16.447-29.855-32.947-29.855h-32.644c-16.5,0-30,13.5-30,30l0,0
+		c0,16.5-13.5,30-30,30H903.643c-16.5,0-30-13.5-30-30l0,0c0-16.5-13.5-30-30-30H811c-16.5,0-31.326,13.435-32.947,29.855
+		l-52.548,532.291c-1.621,16.42,10.553,29.854,27.053,29.854h18.031C787.088,1347.718,800.588,1334.893,800.588,1319.218z"/>
+	<path fill="none" stroke="#000000" stroke-width="30" stroke-miterlimit="10" d="M800.588,1319.218c0-15.675,13.5-28.5,30-28.5
+		h375.938c16.5,0,30,12.825,30,28.5s13.5,28.5,30,28.5h18.031c16.5,0,28.674-13.435,27.053-29.854l-52.548-532.291
+		c-1.621-16.42-16.447-29.855-32.947-29.855h-32.644c-16.5,0-30,13.5-30,30l0,0c0,16.5-13.5,30-30,30H903.643c-16.5,0-30-13.5-30-30
+		l0,0c0-16.5-13.5-30-30-30H811c-16.5,0-31.326,13.435-32.947,29.855l-52.548,532.291c-1.621,16.42,10.553,29.854,27.053,29.854
+		h18.031C787.088,1347.718,800.588,1334.893,800.588,1319.218z"/>	
+		<polyline fill="none" stroke="#000000" stroke-width="26.0473" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+		973.558,635.317 998.055,652.683 1022.554,635.317 1047.056,652.683 1071.558,635.317 	"/>	
+		<rect x="1074.573" y="921.85" fill="#FFFFFF" stroke="#000000" stroke-width="20" stroke-miterlimit="10" width="126.37" height="31.85"/>
+	<polygon fill="#FFFFFF" stroke="#000000" stroke-width="20" stroke-miterlimit="10" points="1074.573,953.699 1074.573,1011.232 
+		1137.759,1039.842 1200.943,1011.232 1200.943,953.699 	"/>
+	<path fill="#FFFFFF" stroke="#000000" stroke-width="34.5615" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M865.644,1822.979c-36.633,0-68.318,21.121-83.589,51.84h167.179C933.962,1844.1,902.277,1822.979,865.644,1822.979z"/>
+	<path fill="#FFFFFF" stroke="#000000" stroke-width="34.5615" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M949.233,1874.818H782.054c-6.211,12.496-9.722,26.57-9.722,41.472c0,7.131,0.826,14.064,2.341,20.736h181.94
+		c1.515-6.672,2.341-13.605,2.341-20.736C958.955,1901.389,955.444,1887.314,949.233,1874.818z"/>
+	<path fill="#FFFDFD" stroke="#000000" stroke-width="34.5615" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M1190.644,1822.979c-36.633,0-68.318,21.121-83.59,51.84h167.18C1258.962,1844.1,1227.276,1822.979,1190.644,1822.979z"/>
+	<path fill="#FFFDFD" stroke="#000000" stroke-width="34.5615" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M1274.233,1874.818h-167.18c-6.211,12.496-9.722,26.57-9.722,41.472c0,7.131,0.826,14.064,2.341,20.736h181.941
+		c1.515-6.672,2.341-13.605,2.341-20.736C1283.955,1901.389,1280.444,1887.314,1274.233,1874.818z"/>
+</svg>
+				</div>
+				
+				
+			</div>
+			<!--//span12-->
+		</div>
+		<!--//row-fluid-->
+	</div>
+	<!-- //contents -->
+
+	<!-- //footer -->
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<h5>Jinhee</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+
+	<!-- script -->
+	<script src="../assets/js/jquery-1.9.1.min.js"></script>
+	<script src="../assets/js/bootstrap-collapse.js"></script>
+	<script src="../assets/js/bootstrap-transition.js"></script>
+	<script src="../assets/js/google-code-prettify/prettify.js"></script>
+	<script src="../assets/js/application.js"></script>
+	<script>
+		$(".btn1").click(function(){
+			$(".box1 > div").eq(0).addClass("timing1");
+			$(".box1 > div").eq(1).addClass("timing2");
+			$(".box1 > div").eq(2).addClass("timing3");
+			$(".box1 > div").eq(3).addClass("timing4");
+			$(".box1 > div").eq(4).addClass("timing5");
+		});
+		$(".btn2").click(function(){
+			$(".box2 > div").eq(0).addClass("timing6");
+			$(".box2 > div").eq(1).addClass("timing7");
+			$(".box2 > div").eq(2).addClass("timing8");
+			$(".box2 > div").eq(3).addClass("timing9");
+			$(".box2 > div").eq(4).addClass("timing10");
+			$(".box2 > div").eq(5).addClass("timing11");
+		});
+		$(".btn3").click(function(){
+			$(".box3 > div").eq(0).addClass("timing12");
+			$(".box3 > div").eq(1).addClass("timing13");
+			$(".box3 > div").eq(2).addClass("timing14");
+			$(".box3 > div").eq(3).addClass("timing15");
+			$(".box3 > div").eq(4).addClass("timing16");
+		});
+		$(".btn4").click(function(){
+			$(".box4 > div").eq(0).addClass("timing17");
+			$(".box4 > div").eq(1).addClass("timing18");
+			$(".box4 > div").eq(2).addClass("timing19");
+			$(".box4 > div").eq(3).addClass("timing20");
+			$(".box4 > div").eq(4).addClass("timing21");
+		});
+
+		var path = document.querySelector(".path8");
+		//var path = $(".path1");
+		var length = path.getTotalLength();
+		//alert(length);
+	</script>
+</body>
+
+</html>

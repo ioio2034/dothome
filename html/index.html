@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Jinhee">
+	<meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+	<meta name="keywords" content="웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, publisher, html5, html4, css3, html, markup, design">
+	<title>HTML Reference</title>
+    
+    <!-- web_font -->
+    <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css' />
+    
+    <!-- css -->
+    <link href="../assets/css/bootstrapTheme.css" rel="stylesheet">
+    <link href="../assets/css/custom.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    
+    <!-- Prettify -->
+    <link href="../assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+	
+	<!-- Icon -->
+	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+	<link rel="apple-touch-icon" href="../assets/ico/icon_57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../assets/ico/icon_114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../assets/ico/icon_72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../assets/ico/icon_144.png">
+	
+	<!-- hmlt5 support -->
+	<!--[if lt IE 9]><script src="../assets/js/html5shiv.js"></script><![endif]-->
+	
+	<!-- IE6,7 support -->
+	<!--[if lte IE 7]><link rel="stylesheet" href="comm/css/ie7.css" type="text/css" ><![endif]-->
+	<!--[if IE 8]><link rel="stylesheet" href="comm/css/ie8.css" type="text/css" ><![endif]-->
+	
+	<!--[if lte IE 6]>
+	<p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">
+	사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+	<a href="http://www.microsoft.com/korea/ie" target="_blank" >업그레이드,</a>
+	<a href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a> 
+	<a href="http://kr.opera.com/download/" target="_blank">오페라,</a>,
+	<a href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+	<a href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+	<![endif]-->
+
+	<style>
+	.face {display:block; margin:20px auto; width:400px; }
+	.face img {width:400px; border-radius:50%; }
+	.face1 img {width:22%; border-radius:10%; margin:1%;}
+	.member {margin:50px 0;}
+	.member li {width:150px; list-style:none; display:inline-block; margin:6px; }
+	.member li img { border-radius:50%;}
+	</style>
+</head>
+
+
+
+<body>
+	<!-- nav -->
+    <div id="top-nav" class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                </button>
+                <div class="nav-collapse collapse">
+                	<ul class="nav pull-right">
+                		<li><a href="#">Jinhee</a></li>
+                		<li><a href="#">reference</a></li>
+                		<li><a href="#">tutorial</a></li>
+                		<li><a href="#">css</a></li>
+                		<li><a href="#">html</a></li>
+                	</ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //nav -->
+    
+    <!-- header -->
+    <div id="header">
+        <div class="container">
+            <div class="row">
+                <div class="span12" style="text-align:center;">
+                    <div class="header_tit">
+	                	<h1>Professional web publishers</h1>
+						<h2><a href="http://ioio2034a.dothome.co.kr/">http://ioio2034a.dothome.co.kr/</a></h2>
+		            </div>
+		            <div class="header_icon" id="wow">
+		                <ul>
+		                    <li class="icon_tit1"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+		                    <li class="icon_tit2"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+		                    <li class="icon_tit3"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+		                    <li class="icon_tit4"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+		                </ul>
+		            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //header -->
+    
+    <!-- contents -->
+	<div class="container" style="margin-top:20px;">
+		<div class="row-fluid">
+			<div class="span12">
+				<h1>HTML Reference</h1>
+
+				<h2>HTML</h2>
+				<p class="well">HTML(HyperText Markup Language)은 웹 페이지를 만들기 위한 언어입니다.</p>
+				<ul>
+					<li>HT = HyperText : 문서와 문서를 연결</li>
+					<li>M = Markup : 마크업, 태그</li>
+					<li>L = Language : 언어</li>
+					<li>HTML이란? 문서와 문서로 연결된 태그 언어를 말합니다.</li>
+				</ul>
+
+				<br>
+
+				<h2>태그(Tag)</h2>
+				<p class="well">태그는 정보를 정의하는 방식을 의미합니다.</p>
+				<ul>
+					<li>태그에는 '열린태그'와 '닫는태그'가 있습니다.</li>
+					<li>닫는 태그에는 "/" 있어야 합니다.</li>
+					<li>닫는 태그가 필요 없는 태그도 있습니다.(&lt;br&gt;, &lt;img&gt;, &lt;input&gt;, &lt;hr&gt;, &lt;meta&gt;)</li>
+					<li>HTML5에서는 "/"가 생략이 가능합니다.</li>
+				</ul>
+
+				<br>
+				<h2>블록 요소/인라인 요소(Block/Inline)</h2>
+				<p class ="well">블록 요소는 박스, 인라인 요소는 텍스트를 의미합니다.</p>
+				<ul>
+					<li>블록 엘리먼트(Block Element)
+						<ul>
+							<li>독립된 박스 영역으로, 한 줄에 하나에 블록 요소만 표현 할 수 있습니다.</li>
+							<li>블록요소에는 블록 요소, 인라인 요소를 모두 포함 할 수 있습니다.</li>
+							<li>&lt;div&gt;, &lt;p&gt;, &lt;h1&gt;~&lt;h6&gt;, &lt;ul&gt;, &lt;li&gt;</li>
+						</ul>
+					</li>
+					<li>인라인 엘리먼트(Inline Element)
+						<ul>
+							<li>독립된 텍스트 영역으로, 한 줄에 여러개의 인라인 요소를 표현 할 수 있습니다.</li>
+							<li>인라인 요소에는 블록 요소가 포함 될 수 없지만, 인라인 요소는 포함 할 수 있습니다.</li>
+							<li>&lt;span&gt;, &lt;a&gt;, &lt;strong&gt;, &lt;em&gt;, &lt;img&gt;</li>
+						</ul>
+					</li>
+				</ul>
+				<p><img src="http://i1.daumcdn.net/img-contents/darum/images/guide/1_02_02.jpg" alt="블록요소인라인요소"></p>
+				
+				<br>
+				<h2>DTD(Document Type Declaration) 선언</h2>
+				<div class="well">웹 페이지를 제작하기 위해서는 웹 문서 형식 유형을 설정하여야 합니다.</div>
+				<ul>
+					<li>독타입을 설정하지 않거나 잘못 설정하면 브라우저에 따라 화면이 다르게 나오거나 렌더링이 달라지기 때문에 독타입을 설정해야 합니다.</li>
+				</ul>	
+				
+<pre class="pre-show prettyprint linenums">
+&lt;!-- html5 --&gt;
+&lt;!DOCTYPE html&gt;
+
+&lt;!-- HTML 4.01 Strict --&gt;
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+
+&lt;!-- HTML 4.01 Transitional --&gt;
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+
+&lt;!-- HTML 4.01 Frameset --&gt;
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;
+
+&lt;!-- XHTML 1.0 Strict --&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+
+&lt;!-- XHTML 1.0 Transitional --&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;!-- XHTML 1.0 Frameset --&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"&gt;
+
+</pre>
+
+				<br>
+				<h2>언어 속성 설정</h2>
+				<div class="well">컨텐츠의 언어를 인식하고 언어 정보를 추출하는데 사용합니다. 미리 언어를 설정하면 효율성이 더 좋아집니다.</div>
+<pre class="pre-show prettyprint linenums">
+&lt;!-- HTML5 --&gt;
+&lt;html lang="ko"&gt;
+
+&lt;!-- HTML4 --&gt;
+&lt;html lang="ko" xml:lang="ko" xmlns= "http://www.w3.org/1999/xhtml"&gt;
+</pre>
+				
+				<br>
+				<h2>문서 정보 설정</h2>
+				<div class="well">웹 문서의 필요한 정보를 제공합니다.</div>
+<pre class="pre-show prettyprint linenums">
+&lt;!-- HTML5 언어설정 --&gt;
+&lt;meta charset="UTF-8"&gt;
+
+&lt;!-- HTML4 언어설정--&gt;
+&lt;meta http-equiv="Content-Language" content="text/html; charset=UTF-8"&gt;
+
+&lt;!-- 웹 문서에 대한 제작자 설정--&gt;
+&lt;meta name="author" content="leejinhee"&gt;
+
+&lt;!-- 웹 문서에 대한 설명 설정--&gt;
+&lt;meta name="descroption" content="사이트 설명"&gt;
+
+&lt;!-- 웹 문서에 대한 키워드 설정--&gt;
+&lt;meta name="keywords" content="키워드"&gt;
+</pre>
+				
+				<br><br>
+				<h1>HTML Description</h1>
+				<h2>&lt;html&gt;</h2>
+				<p class="well">HTML 문서의 최상위 루트를 나타냅니다.</p>
+				
+				<h2>&lt;head&gt;</h2>
+				<p class="well">HTML 문서의 헤더 요소를 정의하는 영역입니다.</p>
+				
+				<h2>&lt;body&gt;</h2>
+				<p class="well">HTML 문서의 본문에 해당하는 콘텐츠를 정의하는 영역입니다.</p>
+				
+				<h2>&lt;meta&gt;</h2>
+				<p class="well">문서에 대한 정보를 제공합니다.</p>
+				
+				<h2>&lt;link&gt;</h2>
+				<p class="well">문서를 외부 파일과 연결합니다.</p>
+				
+				<h2>&lt;title&gt;</h2>
+				<p class="well">문서의 제목을 설정합니다.</p>
+				
+				<h2>&lt;h1&gt;-&lt;h6&gt;</h2>
+				<p class="well">제목을 작성하는 태그입니다.</p>
+				<ul>
+					<li>h1부터 시작해서 h6까지 쓸 수 있으며, 숫자가 높아질수록 보다 하위 제목이 됩니다.</li>
+				</ul>
+				
+				<h2>&lt;p&gt;</h2>
+				<p class="well">문단을 나타내는 요소 입니다.</p>
+				
+				<h2>&lt;ul&gt;</h2>
+				<p class="well">unordered list의 약자로, 순서가 필요없는 목록을 만듭니다.</p>
+				
+				<h2>&lt;li&gt;</h2>
+				<p class="well">list item의 약자로, ul,ol 태그의 내부에서 사용하고 목록의 내용이 되는 태그입니다.</p>
+				
+				<h2>&lt;a&gt;</h2>
+				<p class="well">문서를 링크시키기 위해 속성과 같이 사용합니다.</p>
+				<ul>
+					<li>herf속성 : hypertext reference 약자로, 연결할 주소를 지정하는 속성입니다. &lt;a herf="URL"&gt;&lt;/a&gt; </li>
+					<li>target 속성 : 링크를 클릭할 때 창을 어떻게 열지 결정합니다.
+						<ul>
+							<li>&lt;a target="_self"&gt;&lt;/a&gt; : 현재와 동일한 브라우저 창으로 설정합니다.</li>
+							<li>&lt;a target="_blank"&gt;&lt;/a&gt; : 링크 클릭시 새로운 브라우저 창으로 설정합니다.</li>
+							<li>&lt;a target="_parent"&gt;&lt;/a&gt; : 현재 브라우저의 부모 브라우저 창으로 설정합니다. 부모가 없는 경우 _self와 동일합니다.</li>
+							<li>&lt;a target="_top"&gt;&lt;/a&gt; : 최상위 브라우저 창에서 설정합니다. 부모가 없는 경우 _self와 동일합니다.</li>
+						</ul>
+					</li>
+					<li>특징
+						<ul>
+							<li>방문하지 않은 링크는 밑줄과 파란색으로 표시됩니다.</li>
+							<li>방문한 링크는 밑줄과 보라색으로 표시됩니다.</li>
+							<li>활성화된 링크는 밑줄과 빨간색으로 표시됩니다.</li>
+							<li>&lt;a&gt;태그는 *예외적으로* HTML5에서 블록요소를 포함할 수 있습니다. </li>
+						</ul>
+					</li>
+				</ul>
+
+				<h2>&lt;strong&gt;</h2>
+				<p class="well">텍스트 자체를 강조할 때 사용합니다.</p>
+
+				<h2>&lt;em&gt;</h2>
+				<p class="well">문맥상 중요하게 나타내어야 할 단어에 사용합니다.</p>
+				<ul>
+					<li>기본적으로 &lt;b&gt;태그와 같이 굵게 렌더링됩니다.</li>
+					<li>단순히 텍스트를 굵게하기 위해서 사용하지 않고 의미를 강조해야 하는 단어에 사용합니다.</li>
+				</ul>
+
+				<h2>&lt;span&gt;</h2>
+				<p class="well">인라인 요소들을 그룹화하는데 사용합니다.</p>
+
+				<h2>&lt;div&gt;</h2>
+				<p class="well">division의 약자로 HTML 문서 영역이나 섹션의 분할을 정의합니다.</p>
+				<ul>
+					<li>요소들을 서식 또는 그룹화하고 스타일을 줄 수 있습니다.</li>
+				</ul>
+
+				<h2>&lt;address&gt;</h2>
+				<p class="well">문서의 작성자 또는 소유자에 대한 연락처 정보를 정의합니다.</p>
+				<ul>
+					<li>태그의 정보를 통해 문서의 소유자에게 연락을 할 수 있습니다.</li>
+					<li>일반적으로 웹페이지의 머리글이나 바닥글에 사용됩니다.</li>
+					<li>모든 브라우저에서 기본적으로 italic체로 보여집니다.</li>
+					<li>inline 요소이지만 유일하게 &lt;p&gt; 태그를 내부에 허용합니다.</li>
+				</ul>
+
+				<h2>&lt;hr&gt;</h2>
+				<p class="well">페이지 내에 수평선을 그어 내용 영역을 구분합니다.</p>
+				<ul>
+					<li>기본적으로 회색 수평선으로 표시됩니다.</li>
+				</ul>
+
+				<h2>&lt;br&gt;</h2>
+				<p class="well">문서 내 줄바꿈에 사용합니다.</p>
+				<ul>
+					<li>문단을 만들지는 못하며, 닫는 태그 없이 사용합니다.</li>
+					<li>단락 내에서만 사용합니다.</li>
+				</ul>
+
+				<h2>&lt;table&gt;</h2>
+				<p class="well">표를 정의합니다.</p>
+				<ul>
+					<li>간단한 표 에서는 table 요소와 하나 또는 그 이상의 tr, th, td 요소를 포함합니다.</li>
+					<li>tr 요소는 표의 행을 나타내고 th 요소는 표의 헤더를 나타내고, td 요소는 표의 셀을 나타냅니다.</li>
+					<li>복잡한 표에서는 caption, col, colgroup, thead, tfoot, tbody 같은 요소들을 포함해서 정의할 수 있습니다.</li>
+				</ul>
+
+				<h2>&lt;input&gt;</h2>
+				<p class="well">사용자가 텍스트를 넣을 수 있도록 합니다.</p>
+				<ul>
+					<li>기본값은 text입니다.</li>
+					<li>타입을 지정하여 옵션을 넣으면 다양한 방법으로 설정할 수 있습니다.</li>
+					<li>type : 필수속성입니다. 다음은 타입속성에서 사용할 수 있는 값입니다.
+						<ul>
+							<li>text : 단일행 텍스트 입력필드</li>
+							<li>password : 비밀번호 입력필드, 감춰져서 출력된다.</li>
+							<li>checkbox : 체크박스 생성, 복수 선택이 가능</li>
+							<li>radio : 라디오버튼 생성, 복수 선택 불가능</li>
+							<li>submit : 송신버튼 생성</li>
+							<li>reset : 리셋버튼 생성</li>
+							<li>button : 범용버튼 생성</li>
+							<li>image : 이미지버튼 생성</li>
+							<li>file : 송신파일 선택필드 생성</li>
+							<li>hidden : 감춰진 필드</li>
+						</ul>
+					</li>
+					<li>name(필수 속성) : 컨트롤의 이름 지정. type의 속성이 checkbox나 radio일 경우 name속성이 같은 값으로 지정되면 하나의 그룹으로 취급합니다.</li>
+					<li>value(값) : 컨트롤 종류에 따른 초기값 지정합니다.</li>
+					<li>size(폭) : 컨트롤의 폭을 지정. type속성이 text이거나 password일 경우 문자수를 지정하고 그외의 경우에는 가로폭의 픽셀값을 지정합니다.</li>
+					<li>width : 요소의 가로사이즈를 지정합니다.</li>
+					<li>height : 요소의 높이를 지정합니다.</li>
+					<li>max : input요소에 허용하는 값의 최대값을 지정합니다.</li>
+					<li>maxlength(최대 입력 문자수) : type속성이 text이거나 password일 경우 최대 입력 문자수를 지정합니다.</li>
+					<li>min : input요소에 허용하는 값의 최소값을 지정합니다.</li>
+				</ul>
+
+
+				<h2>&lt;legend&gt;</h2>
+				<p class="well">fieldset요소에 의해 묶여진 내용의 제목을 정의합니다.</p>
+
+				<h2>&lt;fieldset&gt;</h2>
+				<p class="well">form안에 논리적으로 묶인 구성요소를 그룹으로 묶을 때 사용합니다.</p>
+				<ul>
+					<li>fieldset요소의 제목은 &lt;legend&gt;태그를 사용합니다.</li>
+				</ul>
+
+				<h2>&lt;form&gt;</h2>
+				<p class="well">사용자와 정보교환을 가능하게 하는 입력양식을 만들 때 사용합니다.</p>
+				<ul>
+					<li>입력양식 : 방명록이나 게시판, 설문조사, 회원등록 폼 등</li>
+					<li>클라이언트와 서버간의 의사소통을 하는 데 중요한 역할을 합니다.</li>
+					<li>action 속성은 필수 속성이었지만 HTML5에서는 생략 가능합니다.</li>
+				</ul>
+
+				<h2>section</h2>
+				<div class="well">일반적으로 문서의 콘텐츠 섹션을 의미합니다.</div>
+				<ul>
+					<li>콘텐츠와 관련된 한 가지 주제 영역을 말합니다.</li>
+					<li>section 요소는 문장이나 문서의 스타일링 요소가 아니기 때문에 편의상 영역을 위함이면 &lt;div&gt;태그가 좋습니다.</li>
+					<li>section 요소는 제목이 없는 경우에는 섹션이라고 할 수 없기 때문에 제목을 제공해야 합니다.</li>
+					<li>section 요소는 일반적인 주제가 아니라면 구체적인 요소(article, aside, nav)를 사용하는 것이 더 적절합니다.</li>
+				</ul>
+	
+				<h2>article</h2>
+				<div class="well">콘텐츠의 독립적인 항목을 나타내는 콘텐츠를 의미합니다.</div>
+				<ul>
+					<li>article는 포럼, 신문기사, 잡지, 블로그 항목, 게시판 글 등은 콘텐츠의 독립적인 항목을 나타냅니다.</li>
+					<li>section은 하나의 주제를 나타낸다면, article은 주제를 묶은 독립적인 콘텐츠입니다.</li>
+					<li>section 요소 안에는 article 요소를 사용할 수 있으며, article 요소 안에도 section 요소를 사용할 수 있습니다.(시험)</li>
+				</ul>
+
+				<h2>nav</h2>
+				<div class="well">페이지 내에서 이동할 수 있는 네비게이션 링크 그룹입니다.</div>
+				<ul>
+					<li>nav는 문서의 핵심적인 페이지의 메뉴 및 서브메뉴에서 사용하고, 문서에서 주로 한 번 사용합니다.</li>
+					<li>문서 안에 링크가 포함된 콘텐츠는 nav를 사용하지 않습니다.</li>
+					<li>nav는 핵심적인 네비게이션에 사용해야 하므로, footer 내에 링크 그룹의 사용은 적절하지 않습니다.</li>
+				</ul>	
+
+				<h2>main</h2>
+				<div class="well">웹 문서의 주요 콘텐츠 영역을 나타낼 때 사용합니다.</div>
+				<ul>
+					<li>main은 웹페이지에서 한 번만 사용할 수 있으며, 접근성과 검색 영역에 노출을 향상시킵니다.</li>
+					<li>article, aside, footer, header, nav를 하위 요소로 사용할 수 있습니다. 상위 요소 개념입니다.</li>
+				</ul>
+
+				<h2>aside</h2>
+				<div class="well">웹 문서의 메인 콘텐츠와 관련된 사이트 콘텐츠 영역을 나타냅니다.</div>
+				<ul>
+					<li>aside는 메인 콘텐츠와 관련된 사이트의 정보, 광고 등 부분적인 정보를 그룹화할 때 사용합니다.</li>
+				</ul>
+	
+				<h2>header</h2>
+				<div class="well">웹 문서의 header 영역을 나타냅니다.</div>
+				<ul>
+					<li>header에는 웹 페이지에 대한 소개, 네비게이션 영역, 테이블 영역, 검색 영역, 로고 영역을 포함한 영역입니다.</li>
+					<li>header에는 제목 태그가 포함 될 수 있으며, 필수 조건은 아닙니다.</li>
+					<li>header는 섹션 콘텐츠가 아닌 그룹화하기 위한 요소이므로 section 요소를 포함할 수 없습니다.</li>
+				</ul>
+
+				<h2>footer</h2>
+				<div class="well">웹 문서의 footer 영역을 나타냅니다</div>
+				<ul>
+					<li>footer는 저작권 정보, 회사 정보, 관련 링크 주소, 바닥글, 사이트 정보 등을 포함하는 콘텐츠 영역입니다.</li>
+					<li>footer는 섹션 콘텐츠가 아닌 그룹을 나타내는 요소이며, section, article, aside 등을 포함 할 수 있습니다.</li>
+				</ul>
+				
+				<h2>html5에서 새로 생긴 태그</h2>
+				<ul>
+					<li>article : 문서내에서 독립적인 컨텐츠를 표시</li>
+					<li>aside : 주요 내용과는 직접적인 연관성은 없는 분리된 내용을 표시</li>
+					<li>audio : 오디오 파일을 재생</li>
+					<li>bdi : 텍스트의 출력 방향을 브라우저가 판단해 표현</li>
+					<li>bdo : 텍스트의 방향을 명시적으로 지정</li>
+					<li>canvas  : 스크립트와 해상도에 의존하는 비트맵 캔버스를 제공</li>
+					<li>command : 사용자가 실행할 수 있는 명령</li>
+					<li>datalist : 다른 컨트롤을 위해 미리 정의된 옵션의 집합</li>
+					<li>details : 추가적인 정보를 나타내거나 사용자가 요청하는 정보</li>
+					<li>figcaption : 부모요소인 figure요소의 내용들에 대한 캡션, 혹은 제목</li>
+					<li>figure : 일러스트, 다이어그램, 사진, 코드등에 주석을 다는 용도로 사용</li>
+					<li>footer : 주로 저작권 정보나 서비스 제공자 정보</li>
+					<li>header : 네비게이션을 돕거나 소개를 나타내는 그룹을 표현</li>
+					<li>hgroup : 섹션의 제목그룹</li>
+					<li>keygen : 암호화를 위해 키의 쌍(개인키와 공개키)을 만들어내는 컨트롤</li>
+					<li>mark : 하나의 문서 내에서 다른 문맥과의 관련성을 나타내기 위해서 참조 목적으로 마킹되거나 하이라이트된 텍스트를 표현</li>
+					<li>menu : 커맨드 목록</li>
+					<li>meter : 디스크 사용현황, 쿼리 결과의 관련성, 특정 후보에 대한 투표율등의 스칼라 측정 또는 분포비율</li>
+					<li>nav : 다른 페이지나 같은 페이지 안에 다른 부분으로 이어주는 네비게이션 링크로 구성된 섹션을 표현</li>
+					<li>output  : 계산의 결과</li>
+					<li>progress : 작업의 진행정도</li>
+					<li>rp : 루비 텍스트를 지원하지 않는 사용자 에이전트에서 루비 주석을 괄호로 표현</li>
+					<li>rt : 루비 텍스트의 루비 주석</li>
+					<li>ruby : 하나 이상의 구문 컨텐트에 루비주석을 표시하기 위해 사용</li>
+					<li>section : 문서나 응용프로그램의 일반적인 섹션을 표현</li>
+					<li>source  : 미디어 요소를 위해 대체 미디어 자원을 지정</li>		
+					<li>summary : 부모요소인 details요소의 내용에 대한 요약이나 캡션 등</li>	
+					<li>time : 24시간에서의 시간 혹은 그레고리력에서의 정밀한 날짜</li>
+					<li>track : 미디어요소에 사용되며 명식적인 외부 텍스트트랙을 지정</li>
+					<li>video : 비디오나 영화를 재생</li>
+					<li>wbr : 줄바꿈의 가능성을 표현</li>
+				</ul>
+
+				<h2>html5에서 의미가 변한 속성 태그</h2>
+				<ul>
+					<li>a: href 없이 사용하면 "작업용 링크(null link)"로 사용 함. 문장보다는 흐름을 나타내는 콘텐츠에 사용 될 수 있습니다.</li>
+					<li>address : 섹션 개념을 통해 새로운 영역을 표시함. 실제 우편물 주소를 표시합니다.</li>
+					<li>b : 인쇄상 강조 표현을 가진 텍스트 뿐만 아니라 제품 소개 내 제품명, 문서 키워드 같은 아주 특별한 중요도는 갖지 않으나 일반적인 강조의 목적에 사용합니다.</li>
+					<li>em : 중요한 정보를 강조할 때 사용합니다.</li>
+					<li>s : 더이상 옳지 않은 내용을 나타내는 데에 사용합니다. 별도의 CSS 없이 쓰면 브라우저에서는 취소선을 긋는 것이 기본값입니다.</li>
+					<li>u : 양식상 일반적인 텍스트보다 돋보여야 할 때 사용합니다. 예를 들어 철자가 틀린 단어나, 중국어로 번역된 고유 명사 등이 있습니다. 별도의 CSS 없이 쓰면 브라우저에서는 밑줄을 긋는 것이 기본값입니다.</li>
+					<li>i : 어떠한 이유로 일반적인 텍스트보다 돋보여야 할때 사용합니다. 예를 들어 전문 용어, 외국어의 구절 등이 있습니다. 별도의 CSS 없이 쓰면 브라우저에서는 이탤릭체로 표기하는 것이 기본값입니다. 더 적절한 시맨틱 태그가 있을 경우 그쪽을 사용합니다.</li>
+					<li>hr : 원래 단순한 가로줄을 나타내는 태그였으나, 페이지의 주제가 바뀔 때 내용을 분리시키는 의미가 HTML5에서 추가되었습니다.</li>
+					<li>menu : 실제적 문서 메뉴 정보를 제공하는 데 사용합니다</li>
+					<li>small: 세부 주석 및 법적(copyright) 인쇄 문서에서 작은 인쇄 정보를 담을 때 사용합니다.</li>
+					<li>strong : HTML4에서는 강한 강조를 의미했지만, HTML5에서는 중요성으로 의미가 변경되었다.</li>
+				</ul>
+
+				<h2>html5에서 없어진 태그</h2>
+				<ul>
+					<li>acronym : 약어나 이니셜 표시 - 대체 수단 : abbr 요소 사용</li>
+					<li>applet : 자바 애플릿 삽입 - 대체 수단 : embed / object 요소 사용</li>
+					<li>basefont : 기본 폰트 지정 - 대체 수단 : CSS 사용</li>
+					<li>big : 텍스트 사이즈를 크게 함 - 대체 수단 : CSS 사용</li>
+					<li>bgsound : 배경음 삽입 - 대체 수단 : audio 요소를 대신 사용</li>
+					<li>center : 내용을 가운데 정렬함 - 대체 수단 : CSS 사용</li>
+					<li>dir : 디렉토리 내용 표시 - 대체 수단 : ul 요소 사용</li>
+					<li>font : 폰트 지정 - 대체 수단 : CSS 사용</li>
+					<li>frame : 프레임 - 대체 수단 : iframe과 CSS 이용하거나 서버 사이트로 컨텐츠 결합</li>
+					<li>frameset : 프레임 세트 - 대체 수단 : iframe과 CSS를 이용하거나 서버 사이드 컨텐츠 결합</li>
+					<li>isindex : 서버로 송신하는 텍스트 입력란 - 대체 수단 : form과 텍스트 필드의 조합</li>
+					<li>listing, xmp : 내용 그대로 출력 - 대체 수단 : pre 요소나 code 요소를 사용</li>
+					<li>noembed : embed를 사용할 수 없을 때 대체 요소 - 대체 수단 : 폴백이 필요하다면 object 요소 사용</li>
+					<li>noframes : 프레임에 대응하지 않는 브라우저를 위한 컨텐츠 - 대체 수단 : iframe과 CSS를 이용하거나 서버 사이드로 컨텐츠 결합</li>
+					<li>marquee : 문자를 스크롤 - 대체 수단 : CSS 사용</li>
+					<li>plaintext : 내용 그대로 출력 - 대체 수단 : MIME 타입 “text/plain”을 사용</li>
+					<li>strike : 취소선 - 대체 수단 : CSS 사용</li>
+					<li>tt : 글꼴을 같은 폭으로 표시 - 대체 수단 : CSS 사용</li>
+					<li>u : 텍스트에 밑줄을 그음 - 대체 수단 : CSS 사용</li>
+				</ul>
+
+				<h2>table 요소의 웹 표준</h2>
+					<ul>
+						<li>&lt;caption&gt; : 표의 제목을 나타냅니다. 표의 제목 만으로도 표를 쉽게 이해할 수 있게 작성하는 것이 좋습니다. table 요소의 가장 첫 번째 자식으로 와야 합니다.</li>
+						<li>summary 속성
+							<ul>
+								<li>table 요소에 넣는 속성입니다. </li>
+								<li>웹 브라우저에 시각적으로 보이지는 않지만, 스크린 리더로 표를 접근하는 사용자에게 더 많은 설명을 제공합니다.</li>
+								<li>웹 사이트에서 summary을 실질적으로 도움되게 작성하는 경우가 별로 없어, HTML5에서는 이 속성이 사라집니다.</li>
+								<li>HTML5에서는 이 summary 속성대신 caption 요소의 내용을 더 이해하기 쉽게 작성하도록 권고하고 있습니다.</li>
+							</ul>
+						</li>
+						<li>scope 속성
+							<ul>
+								<li>해당하는 이 th 요소가 어느 영역의 제목을 뜻하는 지를 정의 해주는 것입니다.</li>
+								<li>테이블의 데이터를 인식하고 읽는 순서를 결정하게 됩니다.</li>
+								<li>음성 출력 순서 : 원하는 데이터를 음성출력할 수 있고, scope 속성이 붙은 제목이 먼저 나오고 데이터를 음성출력합니다.</li>
+								<li>속성 값 row : 같은 행에 있는 셀들에 적용됩니다.</li>
+								<li>속성 값 col : 같은 열에 있는 셀들에 적용됩니다.</li>
+								<li>속성 값 rowgroup : 동일한 행 집합에 있는 다른 모든 셀에 적용됩니다. 요소가 행 집합을 가리킬 때에만 사용합니다.</li>
+								<li>속성 값 colgroup : 동일한 열 집합이 있는 다른 모든 셀에 적용됩니다. 요소가 열 집합을 가리킬 때에만 사용합니다.</li>
+								<table border="1">
+							    <tr>
+							        <th scope="col">제목</th>
+							        <th scope="col">제목</th>
+							        <th scope="col">제목</th>
+							    </tr>
+							    <tr>
+							        <th scope="row">제목</th>
+							        <td>내용</td>
+							        <td>내용</td>
+							    </tr>
+							</table>
+<pre class="pre-show prettyprint linenums">
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th scope="col"&gt;제목&lt;/th&gt;
+        &lt;th scope="col"&gt;제목&lt;/th&gt;
+        &lt;th scope="col"&gt;제목&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope="row"&gt;제목&lt;/th&gt;
+        &lt;td>내용&lt;/td&gt;
+        &lt;td>내용&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+							</ul>
+						</li>
+						<li>&lt;colgroup&gt; 
+							<ul>
+								<li>하나 이상의 열(col)을 그룹 짓는데 사용하는 요소입니다.</li>
+								<li>이 요소는 caption 다음으로 올 수 있습니다.</li>
+								<li>&lt;td&gt; 태그의 구조적인 그룹화를 위해서 사용, 소스의 양을 줄일 수 있습니다.</li>
+							</ul>
+						</li>
+						<li>&lt;thead&gt;
+							<ul>
+								<li>열의 제목으로 구성된 행의 집합입니다.</li>
+								<li>table 요소에서 한 번만 쓸 수 있으며, tbody나 tfoot보다 먼저 선언되어야 합니다.</li>
+							</ul>
+						</li>
+						<li>&lt;tbody&gt;
+							<ul>
+								<li>도표의 본문에 해당하는 영역을 나타냅니다.</li>
+								<li>tbody는 thead나 tfoot과 달리 여러 번 선언되어 행을 그룹화 할 수 있습니다.</li>
+							</ul>
+						</li>
+						<li>&lt;tfoot&gt;
+							<ul>
+								<li>도표 하단에 나오는 열의 요약으로 구성된 행의 집합입니다.</li>
+								<li>table 내에 한 번만 쓸 수 있으며, tbody보다 먼저 작성하더라도 표의 맨 마지막에 위치하게 나옵니다.</li>
+							</ul>
+						</li>
+
+					</ul>
+
+
+			</div>
+			<!--//span12-->
+		</div>
+		<!--//row-fluid-->
+	</div>  
+	<!-- //contents -->
+    
+    <!-- //footer -->
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <h5>Jinhee</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+	<!-- //footer -->
+
+	<!-- script -->
+	<script src="../assets/js/jquery-1.9.1.min.js"></script> 
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/google-code-prettify/prettify.js"></script>
+    <script src="../assets/js/application.js"></script>
+</body>
+</html>

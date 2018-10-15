@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="leejinhee">
+	<meta name="description" content="모바일 교육 과제 사이트입니다.">
+	<meta name="keywords" content="웹퍼블리셔,웹표준,웹접근성">
+	<title>work</title>
+
+	<!-- style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- webfont -->
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+</head>
+
+<body>
+	<section id="topView">
+	</section>
+
+	<section>
+		<div id="tab-menu">
+			<div id="tab-btn">
+				<ul>
+					<li class="active"><a href="#">실시간 이슈</a></li>
+					<li><a href="#">뉴스</a></li>
+					<li><a href="#">연예</a></li>
+					<li><a href="#">스포츠</a></li>
+				</ul>
+			</div>
+			<!-- tab-btn -->
+
+			<div id="tab-cont">
+				<div id="cont1">
+				</div>
+				<!-- cont1 -->
+				<div id="cont2">
+				</div>
+				<!-- cont2 -->
+				<div id="cont3">
+				</div>
+				<!-- cont3 -->
+				<div id="cont4">
+				</div>
+				<!-- cont1 -->
+			</div>
+			<!-- tab-cont -->
+
+
+		</div>
+
+	</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script>
+	   var tBtn = $("#tab-btn > ul > li");
+
+	   tBtn.click(function(){
+	      var target = $(this);   
+	      var index = target.index();
+
+	      tBtn.removeClass("active");
+	      target.addClass("active");
+
+	      $("#tab-cont > div").css("display","none");
+	      $("#tab-cont > div").eq(index).css("display","block");
+	   });
+</script>
+</body>
+</html>

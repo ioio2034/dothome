@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>.attr() 속성값 변경하기</title>
+</head>
+<body>
+    <h1>.attr() 속성값 변경하기</h1>
+    <a href="#" title="얼굴이미지" id="face" class="face1"><img src="assets/img/face1.png" alt="얼굴"></a>
+    
+    <h2>a의 속성 값</h2>
+    <ul>
+        <li><span class="a1">width:100 (Click)</span></li>
+        <li><span class="a2">width:200 (Click)</span></li>
+        <li><span class="a3">width:300 (Click)</span></li>
+        <li><span class="a4">width:400 (Click)</span></li>
+        <li><span class="a5">width:500 (Click)</span></li>
+    </ul>
+    
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script>
+        //$("#face").attr("title","얼굴 일러스트");
+        //$("#face").attr("id","face2");
+        $("#face").attr({"title":"얼굴 일러스트","id":"face2"});
+        
+        //a1을 클릭했을 때 img의 속성 width값, height값을 변경
+        $(".a1").click(function(){
+            $(".face1 > img").attr({ "width":"100" , "height":"100" });
+        });
+        $(".a2").click(function(){
+            $(".face1 > img").attr({ "width":"200" , "height":"200" });
+        });
+        $(".a3").click(function(){
+            $(".face1 > img").attr({ "width":"300" , "height":"300" });   
+        });
+        $(".a4").click(function(){
+            $(".face1 > img").attr({ "width":"400" , "height":"400" });
+        });
+        $(".a5").click(function(){
+            $(".face1 > img").attr({ "width":"500" , "height":"500" });
+        });
+    </script>
+</body>
+</html>

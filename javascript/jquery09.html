@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>append()</title>
+</head>
+<body>
+    <div id="container">
+        
+    </div>
+    <button id="append">append</button>
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script>
+        //버튼을 클릭하면 alert으로 "클릭했습니다" 출력해주세요
+        $("#append").click(function(){
+            $("#container").append(fun1);
+        });
+        
+        function fun1(){
+            var number = Math.ceil(Math.random()*9);
+            var img = "<img src='assets/img/img0"+number+".jpg' alt='이미지' width='100'>"
+            return img;
+        }
+    </script>
+</body>
+</html>

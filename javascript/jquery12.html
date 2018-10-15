@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>slideToggle</title>
+    <style>
+        * {margin: 0;  padding: 0;}
+        a {text-decoration: none;}
+        .accordion-tit {background-color: #ccc; width: 100%; display: block; padding: 5px; border-top: 1px solid #000;}
+        .accordion-desc {display: none;}
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="accordion">
+            <li><a href="#" class="accordion-tit">title1</a>
+                <div class="accordion-desc">
+                    <p>UI 디자인은 먼저 사용자의 분석을 토대로 UI 시나리오 문서를 충실히 작성하여야만 한다. 최종 사용자의 편의성을 높이도록 해야 하고 감성적인 목표도 함께 고려해야만 한다.</p>
+                </div>
+            </li>
+            <li><a href="#" class="accordion-tit">title2</a>
+                <div class="accordion-desc">
+                    <p>UI 디자인은 먼저 사용자의 분석을 토대로 UI 시나리오 문서를 충실히 작성하여야만 한다. 최종 사용자의 편의성을 높이도록 해야 하고 감성적인 목표도 함께 고려해야만 한다.</p>
+                </div>
+            </li>
+            <li><a href="#" class="accordion-tit">title3</a>
+                <div class="accordion-desc">
+                    <p>UI 디자인은 먼저 사용자의 분석을 토대로 UI 시나리오 문서를 충실히 작성하여야만 한다. 최종 사용자의 편의성을 높이도록 해야 하고 감성적인 목표도 함께 고려해야만 한다.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        //첫번째 버튼을 클릭하면 첫 번째 컨텐츠를 보여주세요
+        $(".accordion-tit").click(function(){
+             $(this).next(".accordion-desc").slideToggle()
+         });
+    </script>
+</body>
+</html>

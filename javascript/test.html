@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    //변수 x=300, y=400 화면에 x*y의 값을 출력해주세요
+       var x = 300;
+       var y = 400;
+       document.write(x*y,"<br>");
+       
+       //함수를 이용하여 x=300, y=400 화면에 x*y의 값을 출력해주세요
+       function fun1(){
+       document.write(x*y,"<br>");
+       };
+       fun1();
+       
+       //매개변수를 이용하여 x=300, y=400 화면에 x*y의 값을 출력해주세요
+       function fun2(num1,num2){
+           var x = num1;
+           var y = num2;
+        document.write(num1*num2,"<br>");
+       };
+       fun2(300,400);
+       
+       //객체를 이용하여 x=300, y=400 화면에 x*y의 값을 출력해주세요
+        var fun3 = {
+            n1 : 300,
+            n2 : 400
+        };
+       document.write(fun3.n1 * fun3.n2,"<br>");
+
+       //for문을 이용해서 20~80까지 출력
+       for(var i=20; i<=80; i++){
+           document.write(i,"<br>")
+       };
+       //for문을 이용해서 20~80중에 5의 배수만 출력해주세요
+       for(var y=20; y<=80; y++){
+           if(y % 5 ==0){
+               document.write(y,"<br>");
+           }
+       };
+       //for문을 이용해서 20~80중에 5의 배수와 8의 배수를 출력해주세요
+       for(var z=20; z<=80; z++){
+           if(z % 5 ==0){
+               document.write(z,"<br>");
+            } else if (z % 8 == 0){
+                document.write(z,"<br>");
+           }
+       };
+    </script>
+</body>
+</html>
